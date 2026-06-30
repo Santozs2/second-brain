@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl *)",
+      "Bash(ls -la Assets)",
+      "Bash(cat .obsidian/community-plugins.json)",
+      "Bash(rm \"06 - Banco de Dados.md\" \"Projetos.md\")",
+      "Bash(mv \"Projetos/Conecta Senai/Home.md.md\" \"Projetos/Conecta Senai/Home.md\")",
+      "Bash(mv \"Visão Geral.md\" \"Sobre.md\")",
+      "Bash(mv \"Road Map.md\" \"Roadmap.md\")",
+      "Bash(mv \"Aprendizado.md\" \"Aprendizados.md\")",
+      "Bash(node *)"
+    ]
+  }
+}
