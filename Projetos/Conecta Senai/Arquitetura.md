@@ -23,7 +23,7 @@ D --> E[(SQLite)]
 
 Monólito Django (MVC/MVT).
 
-→ [[Conceitos/MVC|MVC]]
+→ [[MVC|MVC]]
 
 ---
 
@@ -31,7 +31,7 @@ Monólito Django (MVC/MVT).
 
 Django é responsável pela lógica de negócio, rotas e painel administrativo.
 
-→ [[Estudos/Django|Django]] · [[Estudos/Python|Python]] · [[Conceitos/Models|Models]] · [[Conceitos/Views|Views]]
+→ [[Django|Django]] · [[Python|Python]] · [[Models|Models]] · [[Views|Views]]
 
 ---
 
@@ -39,7 +39,7 @@ Django é responsável pela lógica de negócio, rotas e painel administrativo.
 
 Templates HTML renderizados pelo próprio Django, estilizados com Bootstrap. Sem framework JS.
 
-→ [[Estudos/HTML|HTML]] · [[Estudos/CSS|CSS]]
+→ [[HTML|HTML]] · [[CSS|CSS]]
 
 ---
 
@@ -47,7 +47,7 @@ Templates HTML renderizados pelo próprio Django, estilizados com Bootstrap. Sem
 
 SQLite no ambiente atual, com plano de migrar para PostgreSQL.
 
-→ [[Projetos/Conecta Senai/Banco de Dados|Banco de Dados]] · [[Estudos/Banco de Dados|PostgreSQL]]
+→ [[Banco de Dados|Banco de Dados]] · [[Banco de Dados|PostgreSQL]]
 
 ---
 

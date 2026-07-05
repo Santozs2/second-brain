@@ -13,7 +13,7 @@ status: em-andamento
 
 Aprendi como estruturar projetos utilizando Apps.
 
-→ [[Estudos/Django|Django]]
+→ [[Django|Django]]
 
 ---
 
@@ -21,7 +21,7 @@ Aprendi como estruturar projetos utilizando Apps.
 
 Relacionamentos utilizando ORM.
 
-→ [[Conceitos/ORM|ORM]] · [[Conceitos/Models|Models]]
+→ [[ORM|ORM]] · [[Models|Models]]
 
 ---
 
@@ -29,7 +29,7 @@ Relacionamentos utilizando ORM.
 
 Separação entre lógica e interface.
 
-→ [[Conceitos/MVC|MVC]]
+→ [[MVC|MVC]]
 
 ---
 

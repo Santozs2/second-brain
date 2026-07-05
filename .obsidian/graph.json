@@ -1,22 +1,72 @@
 {
   "collapse-filter": false,
-  "search": "-path:\"Templates\"",
-  "showTags": true,
-  "showAttachments": true,
+  "search": "-path:\"System/Templates\"",
+  "showTags": false,
+  "showAttachments": false,
   "hideUnresolved": true,
   "showOrphans": false,
   "collapse-color-groups": false,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "path:\"Estudos\"",
+      "color": {
+        "a": 1,
+        "rgb": 4431943
+      }
+    },
+    {
+      "query": "path:\"Conceitos\"",
+      "color": {
+        "a": 1,
+        "rgb": 2201331
+      }
+    },
+    {
+      "query": "path:\"Projetos\"",
+      "color": {
+        "a": 1,
+        "rgb": 16485376
+      }
+    },
+    {
+      "query": "path:\"Recursos\"",
+      "color": {
+        "a": 1,
+        "rgb": 10233776
+      }
+    },
+    {
+      "query": "path:\"Snippets\"",
+      "color": {
+        "a": 1,
+        "rgb": 48340
+      }
+    },
+    {
+      "query": "path:\"Diário\"",
+      "color": {
+        "a": 1,
+        "rgb": 7697781
+      }
+    },
+    {
+      "query": "file:Home",
+      "color": {
+        "a": 1,
+        "rgb": 16761095
+      }
+    }
+  ],
   "collapse-display": false,
   "showArrow": false,
-  "textFadeMultiplier": -3,
-  "nodeSizeMultiplier": 0.797817047817048,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 0.716216216216216,
-  "repelStrength": 10,
-  "linkStrength": 1,
-  "linkDistance": 30,
-  "scale": 0.3628873693012053,
+  "centerStrength": 0.5,
+  "repelStrength": 12,
+  "linkStrength": 0.8,
+  "linkDistance": 90,
+  "scale": 1.3541088860722894,
   "close": true
 }

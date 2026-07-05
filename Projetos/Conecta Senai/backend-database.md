@@ -54,5 +54,5 @@ Representa um usuário interessado.
 ## Veja também
 
 - [[Arquitetura]]
-- [[Estudos/Banco de Dados|Banco de Dados (conceito)]]
-- [[Conceitos/Migrations|Migrations]]
+- [[Banco de Dados|Banco de Dados (conceito)]]
+- [[Migrations|Migrations]]

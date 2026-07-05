@@ -14,9 +14,9 @@ status: planejado
 
 ## Plano
 
-A próxima versão deve expor uma API REST usando [[Estudos/Django REST Framework|Django REST Framework]], com autenticação via [[Conceitos/JWT|JWT]].
+A próxima versão deve expor uma API REST usando [[Django REST Framework|Django REST Framework]], com autenticação via [[JWT|JWT]].
 
-→ [[Conceitos/REST API|REST API]] · [[Conceitos/Serializers|Serializers]]
+→ [[REST API|REST API]] · [[Serializers|Serializers]]
 
 ## Veja também
 

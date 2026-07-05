@@ -21,11 +21,11 @@ status: em-andamento
 
 - [ ] Login
 - [ ] Dashboard
-- [x] [[Conceitos/REST API|API REST]] ✅ 2026-06-30
-- [ ] [[Estudos/React|React]]
-- [ ] [[Estudos/Banco de Dados|PostgreSQL]]
-- [ ] [[Estudos/Docker|Docker]]
-- [ ] [[Conceitos/JWT|JWT]]
+- [x] [[REST API|API REST]] ✅ 2026-06-30
+- [ ] [[React|React]]
+- [ ] [[Banco de Dados|PostgreSQL]]
+- [ ] [[Docker|Docker]]
+- [ ] [[JWT|JWT]]
 - [x] Painel Administrativo ✅ 2026-06-30
 
 ---

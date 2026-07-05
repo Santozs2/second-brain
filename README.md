@@ -21,20 +21,20 @@ Isso significa que os links sempre vão "para baixo": um Projeto aponta para as 
 
 | Pasta | O que tem dentro |
 |---|---|
-| 🏠 **Dashboard** | A `Home` — sua porta de entrada. Só navegação, nada de conteúdo. |
-| 📚 **Estudos** | Uma nota por tecnologia (HTML, React, Django...). Resumo, conceitos, exemplos, checklist. |
-| 🧠 **Conceitos** | Ideias transversais (REST API, JWT, ORM, MVC...) que aparecem em várias tecnologias e projetos. |
-| 🚀 **Projetos** | Uma pasta por projeto, com sua própria `Home` interna. |
+| 🏠 **Home** (raiz) | A `Home.md` — sua porta de entrada. Só navegação, nada de conteúdo. |
+| 📚 **Estudos** | Uma nota por tecnologia, organizada em `Linguagens/`, `Frameworks/`, `Web/`, `Ferramentas/` e `Backend/`. |
+| 🧠 **Conceitos** | Ideias transversais (REST API, JWT, ORM, MVC...) e fundamentos de Ciência da Computação (em `Ciência da Computação/`). |
+| 🚀 **Projetos** | Uma pasta por projeto, com sua própria página inicial interna. |
 | 🧩 **Snippets** | Trechos de código prontos, por linguagem. |
 | 📔 **Diário** | Uma nota por dia de estudo. |
 | 📦 **Recursos** | Livros, cursos, vídeos, artigos, documentações e ferramentas. |
-| 🧰 **Templates** | Moldes para criar notas novas. Fica isolada do Graph de propósito. |
+| 🧰 **System/Templates** | Moldes para criar notas novas. Fica isolada do Graph de propósito. |
 
-Cada pasta de conteúdo (Estudos, Conceitos, Projetos, Snippets, Recursos, Diário) tem uma nota índice com o mesmo nome da pasta (ex: `Estudos/Estudos.md`) — é por ela que o Dashboard navega até o conteúdo.
+Cada área (Estudos, Conceitos, Projetos, Snippets, Recursos, Diário) tem uma nota índice com o mesmo nome da pasta (ex: `Estudos/Estudos.md`) que usa **Dataview** para listar o conteúdo — assim o índice não vira um hub pesado no grafo.
 
 ## 🔁 Fluxo diário
 
-1. Abra o Obsidian — ele já abre direto na `Home` do Dashboard.
+1. Abra o Obsidian — ele já abre direto na `Home` (raiz do Vault).
 2. Marque o que vai estudar hoje em **🎯 Objetivos da semana** (ou confira o que já estava marcado).
 3. Use o ícone do **Calendar** na barra lateral para criar/abrir a nota do dia em `Diário/`.
 4. Preencha o diário ao final do estudo: o que estudou, o que aprendeu, dificuldades, o que vem amanhã.
@@ -47,7 +47,7 @@ Cada pasta de conteúdo (Estudos, Conceitos, Projetos, Snippets, Recursos, Diár
 
 ## ✍️ Como criar notas novas
 
-Use os templates em `Templates/` — com o plugin **Templater**, basta criar uma nota vazia na pasta certa e rodar o template (ou configurar para inserir automaticamente). Cada template já vem com as seções certas:
+Use os templates em `System/Templates/` — com o plugin **Templater**, basta criar uma nota vazia na pasta certa e rodar o template (ou configurar para inserir automaticamente). Cada template já vem com as seções certas:
 
 - **Nova tecnologia** → `Template - Nota de Estudo` (em `Estudos/`)
 - **Novo projeto** → `Template - Projeto` (crie uma pasta em `Projetos/<nome>/` com uma `Home.md` de índice, como em `Conecta Senai`)
@@ -72,7 +72,7 @@ Cada projeto é uma pasta em `Projetos/<Nome do Projeto>/` com uma `Home.md` que
 
 `Sobre` · `Arquitetura` (com seções `#Backend` e `#Frontend`) · `Banco de Dados` · `API` · `Roadmap` · `Deploy` · `Aprendizados` · `Bugs` · `Melhorias`
 
-Veja `Projetos/Conecta Senai/Home.md` como exemplo real já preenchido.
+Veja `Projetos/Conecta Senai/Conecta SENAI.md` como exemplo real já preenchido.
 
 ## 🌱 Como evoluir o Vault com o tempo
 

@@ -1,0 +1,55 @@
+---
+type: concept
+id: cs-udp
+created: 2026-07-05
+updated: 2026-07-05
+category: Networking
+tags:
+  - type/concept
+  - domain/networking
+  - difficulty/beginner
+---
+
+# 📡 UDP (User Datagram Protocol)
+
+---
+
+## 🎯 Características
+
+```
+Connectionless - sem handshake
+Unreliable - sem garantia entrega
+Rápido - sem overhead
+Stateless
+```
+
+---
+
+## 📦 Datagram
+
+```
+Header: Source port, Dest port, Length, Checksum
+Payload: Dados
+```
+
+---
+
+## vs TCP
+
+```
+TCP: Confiável, lento, conexão
+UDP: Rápido, não confiável, sem conexão
+```
+
+---
+
+## 🎯 Uso
+
+- DNS queries
+- VOIP
+- Streaming (perder 1 frame OK)
+- Gaming (baixa latência > garantia)
+
+---
+
+**Status:** ✅ Completo

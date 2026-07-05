@@ -14,9 +14,9 @@ status: planejado
 
 ## Plano
 
-Containerizar a aplicação com [[Estudos/Docker|Docker]] e publicar em uma plataforma como Railway ou Render.
+Containerizar a aplicação com [[Docker|Docker]] e publicar em uma plataforma como Railway ou Render.
 
-→ [[Recursos/Ferramentas|Ferramentas]]
+→ [[Ferramentas|Ferramentas]]
 
 ## Veja também
 

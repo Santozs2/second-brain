@@ -44,4 +44,4 @@ Portal responsivo com:
 
 - [[Arquitetura]]
 - [[Roadmap]]
-- [[Projetos/Conecta Senai/Home|Home do projeto]]
+- [[Conecta SENAI|Home do projeto]]
