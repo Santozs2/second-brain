@@ -43,3 +43,12 @@ app.listen(3000);
 ---
 
 **Status:** ✅ Completo
+
+## 🗂️ Neste guia
+
+- [[fw-express-auth]]
+- [[fw-express-database]]
+- [[fw-express-error]]
+- [[fw-express-middleware]]
+- [[fw-express-routing]]
+- [[fw-express-testing]]

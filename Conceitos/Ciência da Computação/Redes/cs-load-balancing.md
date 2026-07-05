@@ -30,3 +30,9 @@ updated: 2026-07-05
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-dns]]
+- [[cs-http]]
+- [[cs-routing]]

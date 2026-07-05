@@ -59,3 +59,10 @@ Composition API - more flexible, similar to React Hooks.
 ---
 
 **Status:** ✅ Completo
+
+## 🗂️ Neste guia
+
+- [[fw-vue-components]]
+- [[fw-vue-lifecycle]]
+- [[fw-vue-reactivity]]
+- [[fw-vue-router]]

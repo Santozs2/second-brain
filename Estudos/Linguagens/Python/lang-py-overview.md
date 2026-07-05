@@ -271,3 +271,7 @@ PyPI (Package Index):
 **Status:** ✅ Completo  
 **Dificuldade:** ⭐ Iniciante  
 **Tempo de Leitura:** 15-20 minutos
+
+## 🗂️ Neste guia
+
+- [[lang-py-syntax]]

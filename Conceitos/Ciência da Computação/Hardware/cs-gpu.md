@@ -53,3 +53,9 @@ Programação paralela em GPU
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-alu-design]]
+- [[cs-cpu-architecture]]
+- [[cs-memory-hierarchy]]

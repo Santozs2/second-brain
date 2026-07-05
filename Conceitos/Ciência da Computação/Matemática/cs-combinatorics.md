@@ -60,3 +60,9 @@ def pascal_triangle(n):
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-boolean-logic]]
+- [[cs-recurrence-relations]]
+- [[cs-linear-algebra]]

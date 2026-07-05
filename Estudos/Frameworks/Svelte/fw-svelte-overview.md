@@ -58,3 +58,12 @@ No runtime overhead. Compile to vanilla JS.
 ---
 
 **Status:** ✅ Completo
+
+## 🗂️ Neste guia
+
+- [[fw-svelte-animations]]
+- [[fw-svelte-deploy]]
+- [[fw-svelte-events]]
+- [[fw-svelte-reactive]]
+- [[fw-svelte-sveltekit]]
+- [[fw-svelte-testing]]

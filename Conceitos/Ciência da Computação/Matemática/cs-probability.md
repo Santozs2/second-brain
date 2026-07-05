@@ -65,3 +65,9 @@ P(A|B) = P(B|A) * P(A) / P(B)
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-boolean-logic]]
+- [[cs-combinatorics]]
+- [[cs-linear-algebra]]

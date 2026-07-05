@@ -56,3 +56,9 @@ Threads pausam durante GC - latência visível
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-disk-io]]
+- [[cs-file-system]]
+- [[cs-process]]

@@ -49,3 +49,13 @@ NPM - Node Package Manager
 ---
 
 **Status:** ✅ Completo
+
+## 🗂️ Neste guia
+
+- [[fw-nodejs-async]]
+- [[fw-nodejs-cluster]]
+- [[fw-nodejs-deploy]]
+- [[fw-nodejs-error-handling]]
+- [[fw-nodejs-modules]]
+- [[fw-nodejs-streams]]
+- [[fw-nodejs-testing]]

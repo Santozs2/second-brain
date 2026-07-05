@@ -73,3 +73,9 @@ JavaScript não consegue acessar
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-aes]]
+- [[cs-authentication]]
+- [[cs-csrf]]

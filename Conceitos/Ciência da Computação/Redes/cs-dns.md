@@ -67,3 +67,9 @@ TXT   → Texto (SPF, DKIM)
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-http]]
+- [[cs-routing]]
+- [[cs-ssl-tls]]

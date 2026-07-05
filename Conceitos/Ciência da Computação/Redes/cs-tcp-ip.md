@@ -48,3 +48,9 @@ IPv6: 2001:db8::1 (128 bits, hexa)
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-dns]]
+- [[cs-http]]
+- [[cs-load-balancing]]

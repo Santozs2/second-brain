@@ -54,3 +54,9 @@ Solução: aumentar RAM ou reduzir working set
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-alu-design]]
+- [[cs-cpu-architecture]]
+- [[cs-gpu]]

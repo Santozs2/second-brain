@@ -71,3 +71,9 @@ Muito difícil para n de 2048 bits
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-aes]]
+- [[cs-authentication]]
+- [[cs-csrf]]

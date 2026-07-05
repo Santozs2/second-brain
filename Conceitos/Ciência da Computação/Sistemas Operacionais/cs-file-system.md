@@ -71,3 +71,9 @@ ext4, NTFS usam journals para evitar corrupção
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-disk-io]]
+- [[cs-process]]
+- [[cs-scheduling]]

@@ -49,3 +49,9 @@ TCP/IP: Prático (4 layers)
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-dns]]
+- [[cs-http]]
+- [[cs-load-balancing]]

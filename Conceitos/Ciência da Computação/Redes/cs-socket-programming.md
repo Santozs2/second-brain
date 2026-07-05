@@ -56,3 +56,9 @@ server.sendto(b'Response', addr)
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-dns]]
+- [[cs-http]]
+- [[cs-load-balancing]]

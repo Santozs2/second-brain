@@ -53,3 +53,11 @@ function Counter() {
 ---
 
 **Status:** ✅ Completo
+
+## 🗂️ Neste guia
+
+- [[fw-solidjs-components]]
+- [[fw-solidjs-deploy]]
+- [[fw-solidjs-forms]]
+- [[fw-solidjs-routing]]
+- [[fw-solidjs-signals]]

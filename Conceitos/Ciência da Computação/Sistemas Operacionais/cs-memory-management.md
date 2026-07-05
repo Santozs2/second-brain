@@ -71,3 +71,9 @@ Fragmentação externa possível
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-disk-io]]
+- [[cs-file-system]]
+- [[cs-garbage-collection]]

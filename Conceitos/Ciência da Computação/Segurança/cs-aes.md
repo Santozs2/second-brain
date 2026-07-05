@@ -54,3 +54,9 @@ Nenhum ataque conhecido (2024)
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-authentication]]
+- [[cs-csrf]]
+- [[cs-encryption]]

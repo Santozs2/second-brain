@@ -37,3 +37,9 @@ Load balancing, caching
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-dns]]
+- [[cs-http]]
+- [[cs-load-balancing]]

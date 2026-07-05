@@ -70,3 +70,9 @@ De Morgan:      (A ∪ B)' = A' ∩ B'
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-boolean-logic]]
+- [[cs-combinatorics]]
+- [[cs-linear-algebra]]

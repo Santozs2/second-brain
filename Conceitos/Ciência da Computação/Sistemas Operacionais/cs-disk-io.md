@@ -36,3 +36,9 @@ Total: ~7-14ms
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-process]]
+- [[cs-scheduling]]
+- [[cs-synchronization]]

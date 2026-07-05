@@ -56,3 +56,11 @@ npm run dev
 ---
 
 **Status:** ✅ Completo
+
+## 🗂️ Neste guia
+
+- [[fw-nuxt-auto-routing]]
+- [[fw-nuxt-composables]]
+- [[fw-nuxt-deploy]]
+- [[fw-nuxt-middleware]]
+- [[fw-nuxt-ssr]]

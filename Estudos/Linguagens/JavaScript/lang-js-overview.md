@@ -420,3 +420,11 @@ Frameworks Populares:
 **Status:** ✅ Completo  
 **Dificuldade:** ⭐ Iniciante  
 **Tempo de Leitura:** 15-20 minutos
+
+## 🗂️ Neste guia
+
+- [[lang-js-async]]
+- [[lang-js-ecosystem]]
+- [[lang-js-functional]]
+- [[lang-js-oop]]
+- [[lang-js-syntax]]

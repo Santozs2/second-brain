@@ -65,3 +65,9 @@ Melhor para senhas (resiste brute force)
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Ver também nesta área
+
+- [[cs-aes]]
+- [[cs-authentication]]
+- [[cs-csrf]]
