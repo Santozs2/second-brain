@@ -1,4 +1,5 @@
----
+﻿---
+type: technology
 type: tech
 tags:
   - tech
@@ -80,3 +81,5 @@ class TarefaViewSet(viewsets.ModelViewSet):
 
 - [[Estudos/Django|Django]]
 - [[Estudos/Python|Python]]
+
+

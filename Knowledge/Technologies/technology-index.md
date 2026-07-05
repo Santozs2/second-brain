@@ -34,7 +34,12 @@ status: ativo
 - [[Estudos/Git|Git]]
 - [[Estudos/Linux|Linux]]
 
+## IA / Voz
+
+- [[Estudos/Assistente de Voz (Wake Word, STT, LLM, TTS)|Assistente de Voz (Wake Word, STT, LLM, TTS)]]
+
 ## Veja também
 
 - [[Conceitos/Conceitos|Conceitos]]
+- [[Metas/AMEA AI|AMEA AI]]
 - [[Dashboard/Home|Painel Principal]]

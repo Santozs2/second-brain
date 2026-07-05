@@ -1,4 +1,5 @@
----
+﻿---
+type: technology
 type: tech
 tags:
   - tech
@@ -74,3 +75,4 @@ CREATE TABLE tarefas (
 - [[Estudos/Django|Django]]
 - [[Estudos/Docker|Docker]]
 - [[Snippets/SQL|Snippets de SQL]]
+
