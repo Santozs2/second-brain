@@ -1,15 +1,15 @@
 ---
 type: tech
+area: Estudos
+status: aprendendo
+tecnologia: React
 tags:
   - tech
   - estudo
   - frontend
-tecnologia: React
-status: aprendendo
 created: 2026-06-30
 updated: 2026-06-30
 ---
-
 # React
 
 > [!tip] Status
@@ -57,6 +57,10 @@ function Contador() {
 
 ## 🗒️ Notas pessoais
 
+
+## 📖 Aprofundar
+
+- [[fw-react-overview|Guia detalhado de React]] — hooks, lifecycle, padrões, performance e testes
 
 ## 🔗 Veja também
 

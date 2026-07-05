@@ -1,13 +1,13 @@
 ---
 type: resource
+area: Recursos
+status: ativo
+tipo: video
 tags:
   - resource
-tipo: video
 created: 2026-06-30
 updated: 2026-06-30
-status: ativo
 ---
-
 # 🎬 Vídeos
 
 | Vídeo/Canal | Tema | Status | Link |

@@ -1,15 +1,14 @@
 ---
-type: technology
+type: tech
+area: Estudos
 id: lang-js-syntax
-created: 2026-07-05
-updated: 2026-07-05
 category: JavaScript
 tags:
-  - type/technology
-  - domain/frontend
-  - language/javascript
+  - frontend
+  - javascript
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🟨 JavaScript - Syntax & Types
 
 ---

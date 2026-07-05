@@ -1,12 +1,12 @@
 ---
 type: concept
+area: Conceitos
+status: estavel
 tags:
   - concept
 created: 2026-06-30
 updated: 2026-06-30
-status: estavel
 ---
-
 # ORM
 
 ## Definição

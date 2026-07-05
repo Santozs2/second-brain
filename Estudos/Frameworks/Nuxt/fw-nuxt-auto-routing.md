@@ -1,10 +1,11 @@
 ---
-type: technology
+type: tech
+area: Estudos
 id: fw-nuxt-auto-routing
-created: 2026-07-05
 category: Nuxt
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🎯 Nuxt - Auto Routing
 
 ---

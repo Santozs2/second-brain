@@ -1,19 +1,17 @@
 ---
-type: technology
 type: tech
+area: Estudos
+status: aprendendo
+tecnologia: Django REST Framework
+aliases: 
 tags:
   - tech
   - estudo
   - backend
   - api
-tecnologia: Django REST Framework
-status: aprendendo
-aliases:
-  - DRF
 created: 2026-06-30
 updated: 2026-06-30
 ---
-
 # Django REST Framework (DRF)
 
 > [!tip] Status

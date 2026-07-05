@@ -1,12 +1,12 @@
 ---
 type: moc
+area: Projetos
+status: ativo
 tags:
   - moc
 created: 2026-07-05
 updated: 2026-07-05
-status: ativo
 ---
-
 # 🚀 Projetos
 
 > Cada projeto tem sua própria página inicial (`Home`).

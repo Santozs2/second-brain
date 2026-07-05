@@ -1,13 +1,13 @@
 ---
 type: resource
+area: Recursos
+status: ativo
+tipo: livro
 tags:
   - resource
-tipo: livro
 created: 2026-06-30
 updated: 2026-06-30
-status: ativo
 ---
-
 # 📚 Livros
 
 | Título                            | Autor              | Status  | Link                                                                                                                                                                                                                                                                                                                                                                                                                          |

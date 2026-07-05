@@ -1,18 +1,17 @@
 ---
-type: technology
+type: tech
+area: Estudos
+status: stable
+difficulty: beginner
 id: lang-js-overview
-created: 2026-07-04
-updated: 2026-07-04
 category: JavaScript
 tags:
-  - type/technology
-  - domain/frontend
-  - domain/backend
-  - language/javascript
-  - status/stable
-difficulty: beginner
+  - frontend
+  - backend
+  - javascript
+created: 2026-07-04
+updated: 2026-07-04
 ---
-
 # 🟨 JavaScript - Overview & History
 
 > The Programming Language of the Web - From Browser to Everywhere
@@ -383,9 +382,11 @@ Frameworks Populares:
 
 ## 🔗 Referências Cruzadas
 
+- [[JavaScript|Nota principal — JavaScript]]
+
 ### Linguagens Relacionadas
 - [[lang-ts-overview|TypeScript]] - JS com tipos estáticos
-- [[lang-python-overview|Python]] - Backend alternativo
+- [[lang-py-overview|Python]] - Backend alternativo
 - [[lang-go-overview|Go]] - Backend performático
 
 ### Conceitos

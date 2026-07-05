@@ -1,17 +1,16 @@
 ---
-type: technology
 type: tech
+area: Estudos
+status: aprendendo
+tecnologia: Assistente de Voz
 tags:
   - tech
   - estudo
   - ai
   - voz
-tecnologia: Assistente de Voz
-status: aprendendo
 created: 2026-07-02
 updated: 2026-07-02
 ---
-
 # Assistente de Voz (Wake Word → STT → LLM → TTS)
 
 > [!tip] Status

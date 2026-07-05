@@ -1,17 +1,16 @@
 ---
-type: technology
 type: tech
+area: Estudos
+status: aprendendo
+tecnologia: Banco de Dados
 tags:
   - tech
   - estudo
   - backend
   - banco-de-dados
-tecnologia: Banco de Dados
-status: aprendendo
 created: 2026-06-30
 updated: 2026-06-30
 ---
-
 # Banco de Dados (SQL / PostgreSQL)
 
 > [!tip] Status

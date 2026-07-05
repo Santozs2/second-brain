@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: advanced
 id: cs-ssl-tls
-created: 2026-07-05
-updated: 2026-07-05
 category: Networking
 tags:
-  - type/concept
-  - domain/networking
-  - difficulty/advanced
+  - networking
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🔐 SSL/TLS
 
 > Protocolo de segurança para web.

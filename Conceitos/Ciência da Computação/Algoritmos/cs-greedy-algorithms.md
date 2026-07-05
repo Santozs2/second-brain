@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: intermediate
 id: cs-greedy-algorithms
-created: 2026-07-05
-updated: 2026-07-05
 category: Algorithms
 tags:
-  - type/concept
-  - domain/algorithms
-  - difficulty/intermediate
+  - algorithms
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🤑 Greedy Algorithms
 
 > Escolhe melhor opção LOCAL esperando obter ótimo GLOBAL.

@@ -1,18 +1,17 @@
 ---
-type: technology
+type: tech
+area: Estudos
+status: stable
+difficulty: beginner
 id: lang-py-overview
-created: 2026-07-04
-updated: 2026-07-04
 category: Python
 tags:
-  - type/technology
-  - domain/backend
-  - domain/data-science
-  - language/python
-  - status/stable
-difficulty: beginner
+  - backend
+  - data-science
+  - python
+created: 2026-07-04
+updated: 2026-07-04
 ---
-
 # 🐍 Python - Overview & History
 
 > The Most Popular Language - Simple, Powerful, Ubiquitous
@@ -260,9 +259,10 @@ PyPI (Package Index):
 
 ## 🔗 Referências Cruzadas
 
+- [[Python|Nota principal — Python]]
 - [[lang-js-overview|JavaScript]] - Web alternativa
 - [[lang-go-overview|Go]] - Backend performático
-- [[ComputerScience|Computer Science fundamentals]]
+- [[Conceitos|Ciência da Computação]] - Fundamentos
 
 ---
 

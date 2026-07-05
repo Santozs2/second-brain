@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: beginner
 id: cs-sql-injection
-created: 2026-07-05
-updated: 2026-07-05
 category: Security
 tags:
-  - type/concept
-  - domain/security
-  - difficulty/beginner
+  - security
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 💉 SQL Injection
 
 > Atacante injeta código SQL malicioso.

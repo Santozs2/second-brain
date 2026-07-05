@@ -1,12 +1,12 @@
 ---
 type: project
+area: Projetos
+status: em-andamento
 tags:
   - project
 created: 2026-06-30
 updated: 2026-06-30
-status: em-andamento
 ---
-
 # 🎓 Conecta SENAI
 
 ## Navegação
@@ -22,6 +22,10 @@ status: em-andamento
 - [[Aprendizados]]
 - [[Bugs]]
 - [[Melhorias]]
+
+## Tecnologias
+
+- [[Django|Django]] · [[Python|Python]] · [[HTML|HTML]] · [[CSS|CSS]] · [[Banco de Dados|Banco de Dados]]
 
 ## Veja também
 

@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: intermediate
 id: cs-tree
-created: 2026-07-05
-updated: 2026-07-05
 category: Data Structures
 tags:
-  - type/concept
-  - domain/data-structures
-  - difficulty/intermediate
+  - data-structures
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🌳 Tree (Árvore)
 
 > Estrutura hierárquica com raiz, nós e folhas.

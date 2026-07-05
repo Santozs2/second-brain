@@ -1,16 +1,15 @@
 ---
 type: concept
+area: Conceitos
+status: stable
+difficulty: intermediate
 id: cs-sort-algos
-created: 2026-07-04
-updated: 2026-07-04
 category: Algorithms
 tags:
-  - type/concept
-  - domain/algorithms
-  - status/stable
-  - difficulty/intermediate
+  - algorithms
+created: 2026-07-04
+updated: 2026-07-04
 ---
-
 # 🔄 Algoritmos de Ordenação
 
 > Organizar elementos em ordem específica (crescente ou decrescente).

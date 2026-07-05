@@ -1,15 +1,15 @@
 ---
-type: technology
+type: tech
+area: Estudos
 id: fw-react-overview
-created: 2026-07-05
-updated: 2026-07-05
 category: React
 tags:
-  - framework/react
+  - react
   - frontend
   - javascript
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # ⚛️ React - Complete Framework Guide
 
 > Facebook's declarative JavaScript library for building UIs with components.
@@ -156,9 +156,10 @@ App Component (Root)
 
 ## 🔗 Related
 
-[[fw-react-lifecycle|React Lifecycle]]  
+[[React|Nota principal — React]]
+[[fw-react-lifecycle|React Lifecycle]]
 [[fw-react-hooks|React Hooks]]  
-[[fw-next-overview|Next.js]]  
+[[fw-nextjs-overview|Next.js]]
 [[fw-react-performance|React Performance]]
 
 ---

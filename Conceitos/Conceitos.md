@@ -1,12 +1,12 @@
 ---
 type: moc
+area: Conceitos
+status: ativo
 tags:
   - moc
 created: 2026-07-05
 updated: 2026-07-05
-status: ativo
 ---
-
 # 🧠 Conceitos
 
 > Ideias transversais que aparecem em várias tecnologias, e os fundamentos de Ciência da Computação.

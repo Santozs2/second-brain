@@ -1,16 +1,16 @@
 ---
 type: tech
+area: Estudos
+status: aprendendo
+tecnologia: TypeScript
 tags:
   - tech
   - estudo
   - frontend
   - backend
-tecnologia: TypeScript
-status: aprendendo
 created: 2026-06-30
 updated: 2026-06-30
 ---
-
 # TypeScript
 
 > [!tip] Status

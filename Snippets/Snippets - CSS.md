@@ -1,13 +1,13 @@
 ---
 type: snippet
+area: Snippets
+status: estavel
+linguagem: CSS
 tags:
   - snippet
-linguagem: CSS
 created: 2026-06-30
 updated: 2026-06-30
-status: estavel
 ---
-
 # 🧩 Snippets de CSS
 
 > [!tip] Como usar

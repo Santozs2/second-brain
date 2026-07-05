@@ -1,10 +1,11 @@
 ---
-type: technology
+type: tech
+area: Estudos
 id: fw-nextjs-overview
-created: 2026-07-05
 category: Next.js
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # ⚡ Next.js - Complete Framework Guide
 
 ---
@@ -62,6 +63,13 @@ next.config.js
 - **Auth:** NextAuth.js
 - **Styling:** Tailwind, Emotion
 - **Deployment:** Vercel, AWS
+
+---
+
+## 🔗 Relacionado
+
+- [[Next.js|Nota principal — Next.js]]
+- [[fw-react-overview|React (base do Next.js)]]
 
 ---
 

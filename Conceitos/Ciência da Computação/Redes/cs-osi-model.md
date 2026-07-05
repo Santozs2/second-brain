@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: beginner
 id: cs-osi-model
-created: 2026-07-05
-updated: 2026-07-05
 category: Networking
 tags:
-  - type/concept
-  - domain/networking
-  - difficulty/beginner
+  - networking
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🌐 OSI Model
 
 > 7-layer network model (conceptual).

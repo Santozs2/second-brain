@@ -1,16 +1,15 @@
 ---
 type: concept
+area: Conceitos
+status: stable
+difficulty: beginner
 id: cs-array
-created: 2026-07-04
-updated: 2026-07-04
 category: Data Structures
 tags:
-  - type/concept
-  - domain/data-structures
-  - status/stable
-  - difficulty/beginner
+  - data-structures
+created: 2026-07-04
+updated: 2026-07-04
 ---
-
 # 📦 Array (Vetor)
 
 > Coleção de elementos do mesmo tipo em posições contíguas de memória.

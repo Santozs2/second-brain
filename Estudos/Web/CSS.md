@@ -1,15 +1,15 @@
 ---
 type: tech
+area: Estudos
+status: aprendendo
+tecnologia: CSS
 tags:
   - tech
   - estudo
   - frontend
-tecnologia: CSS
-status: aprendendo
 created: 2026-06-30
 updated: 2026-06-30
 ---
-
 # CSS
 
 > [!tip] Status

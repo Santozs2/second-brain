@@ -1,13 +1,13 @@
 ---
 type: snippet
+area: Snippets
+status: estavel
+linguagem: JavaScript
 tags:
   - snippet
-linguagem: JavaScript
 created: 2026-06-30
 updated: 2026-06-30
-status: estavel
 ---
-
 # 🧩 Snippets de JavaScript
 
 > [!tip] Como usar

@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: intermediate
 id: cs-linear-algebra
-created: 2026-07-05
-updated: 2026-07-05
 category: Mathematics
 tags:
-  - type/concept
-  - domain/mathematics
-  - difficulty/intermediate
+  - mathematics
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 📐 Linear Algebra
 
 > Vetores e matrizes.

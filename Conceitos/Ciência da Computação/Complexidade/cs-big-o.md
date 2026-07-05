@@ -1,16 +1,15 @@
 ---
 type: concept
+area: Conceitos
+status: stable
+difficulty: beginner
 id: cs-bigoo-notation
-created: 2026-07-04
-updated: 2026-07-04
 category: Complexity
 tags:
-  - type/concept
-  - domain/complexity
-  - status/stable
-  - difficulty/beginner
+  - complexity
+created: 2026-07-04
+updated: 2026-07-04
 ---
-
 # 📈 Big O Notation
 
 > Método para descrever como o tempo de execução ou espaço cresce com o tamanho da entrada.

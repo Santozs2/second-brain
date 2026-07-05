@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: advanced
 id: cs-rsa
-created: 2026-07-05
-updated: 2026-07-05
 category: Security
 tags:
-  - type/concept
-  - domain/security
-  - difficulty/advanced
+  - security
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🔐 RSA Encryption
 
 > Criptografia assimétrica baseada em números primos.

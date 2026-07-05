@@ -1,10 +1,11 @@
 ---
-type: technology
+type: tech
+area: Estudos
 id: fw-svelte-overview
-created: 2026-07-05
 category: Svelte
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🔥 Svelte - Complete Guide
 
 ---

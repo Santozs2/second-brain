@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: advanced
 id: cs-synchronization
-created: 2026-07-05
-updated: 2026-07-05
 category: Operating Systems
 tags:
-  - type/concept
-  - domain/operating-systems
-  - difficulty/advanced
+  - operating-systems
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🔒 Synchronization
 
 > Coordenar múltiplos processos/threads.

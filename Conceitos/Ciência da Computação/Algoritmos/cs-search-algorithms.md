@@ -1,16 +1,15 @@
 ---
 type: concept
+area: Conceitos
+status: stable
+difficulty: intermediate
 id: cs-search-algos
-created: 2026-07-04
-updated: 2026-07-04
 category: Algorithms
 tags:
-  - type/concept
-  - domain/algorithms
-  - status/stable
-  - difficulty/intermediate
+  - algorithms
+created: 2026-07-04
+updated: 2026-07-04
 ---
-
 # 🔍 Algoritmos de Busca
 
 > Encontrar um elemento específico em uma coleção de dados.

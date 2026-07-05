@@ -1,13 +1,13 @@
 ---
 type: resource
+area: Recursos
+status: ativo
+tipo: documentacao
 tags:
   - resource
-tipo: documentacao
 created: 2026-06-30
 updated: 2026-06-30
-status: ativo
 ---
-
 # 📖 Documentações
 
 | Tecnologia | Link |

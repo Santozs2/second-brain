@@ -1,12 +1,12 @@
 ---
 type: dashboard
+area: Home
+status: ativo
 tags:
   - dashboard
 created: 2026-07-05
 updated: 2026-07-05
-status: ativo
 ---
-
 # 🏠 Painel Principal
 
 > Sua base de conhecimento pessoal. Comece por aqui.

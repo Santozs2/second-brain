@@ -1,10 +1,11 @@
 ---
-type: technology
+type: tech
+area: Estudos
 id: fw-nodejs-cluster
-created: 2026-07-05
 category: Node.js
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🟢 Node.js - Clustering
 
 ---

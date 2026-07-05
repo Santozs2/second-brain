@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: intermediate
 id: cs-memory-management
-created: 2026-07-05
-updated: 2026-07-05
 category: Operating Systems
 tags:
-  - type/concept
-  - domain/operating-systems
-  - difficulty/intermediate
+  - operating-systems
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🧠 Memory Management
 
 > Como SO gerencia memória dos processos.

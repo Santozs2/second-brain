@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: beginner
 id: cs-boolean-logic
-created: 2026-07-05
-updated: 2026-07-05
 category: Mathematics
 tags:
-  - type/concept
-  - domain/mathematics
-  - difficulty/beginner
+  - mathematics
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # ⚡ Boolean Logic
 
 > Lógica de valores true/false.

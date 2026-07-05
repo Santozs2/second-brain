@@ -1,14 +1,13 @@
 ---
 type: concept
+area: Conceitos
+status: estavel
+aliases: 
 tags:
   - concept
-aliases:
-  - CI/CD
 created: 2026-06-30
 updated: 2026-06-30
-status: estavel
 ---
-
 # CI/CD
 
 ## Definição

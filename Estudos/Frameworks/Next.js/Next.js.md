@@ -1,15 +1,15 @@
 ---
 type: tech
+area: Estudos
+status: aprendendo
+tecnologia: Next.js
 tags:
   - tech
   - estudo
   - frontend
-tecnologia: Next.js
-status: aprendendo
 created: 2026-06-30
 updated: 2026-06-30
 ---
-
 # Next.js
 
 > [!tip] Status
@@ -61,6 +61,10 @@ export default async function Home() {
 
 ## 🗒️ Notas pessoais
 
+
+## 📖 Aprofundar
+
+- [[fw-nextjs-overview|Guia detalhado de Next.js]] — rendering, API routes, performance, security e deploy
 
 ## 🔗 Veja também
 

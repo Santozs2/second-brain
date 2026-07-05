@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: intermediate
 id: cs-virtual-memory
-created: 2026-07-05
-updated: 2026-07-05
 category: Hardware
 tags:
-  - type/concept
-  - domain/hardware
-  - difficulty/intermediate
+  - hardware
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 💾 Virtual Memory
 
 > Ilusão de memória maior usando disco.

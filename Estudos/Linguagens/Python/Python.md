@@ -1,15 +1,15 @@
 ---
 type: tech
+area: Estudos
+status: aprendendo
+tecnologia: Python
 tags:
   - tech
   - estudo
   - backend
-tecnologia: Python
-status: aprendendo
 created: 2026-06-30
 updated: 2026-06-30
 ---
-
 # Python
 
 > [!tip] Status
@@ -58,7 +58,12 @@ class Usuario:
 ## 🗒️ Notas pessoais
 
 
+## 📖 Aprofundar
+
+- [[lang-py-overview|Guia detalhado de Python]] — visão geral e sintaxe aprofundada
+
 ## 🔗 Veja também
 
 - [[Django|Django]]
 - [[Banco de Dados|Banco de Dados]]
+- [[Snippets - Python|Snippets de Python]]

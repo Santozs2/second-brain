@@ -1,12 +1,12 @@
 ---
 type: project
+area: Projetos
+status: planejado
 tags:
   - project
 created: 2026-06-30
 updated: 2026-06-30
-status: planejado
 ---
-
 # API
 
 > [!info] Status

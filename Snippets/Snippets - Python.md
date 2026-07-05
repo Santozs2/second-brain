@@ -1,13 +1,13 @@
 ---
 type: snippet
+area: Snippets
+status: estavel
+linguagem: Python
 tags:
   - snippet
-linguagem: Python
 created: 2026-06-30
 updated: 2026-06-30
-status: estavel
 ---
-
 # 🧩 Snippets de Python
 
 > [!tip] Como usar

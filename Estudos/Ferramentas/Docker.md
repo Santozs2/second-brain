@@ -1,15 +1,15 @@
 ---
 type: tech
+area: Estudos
+status: aprendendo
+tecnologia: Docker
 tags:
   - tech
   - estudo
   - devops
-tecnologia: Docker
-status: aprendendo
 created: 2026-06-30
 updated: 2026-06-30
 ---
-
 # Docker
 
 > [!tip] Status

@@ -1,7 +1,11 @@
 ---
-
-## tags: [projeto, assistente-virtual, roadmap, ferias-2026] status: planejamento inicio: 2026-07-01 tipo: second-brain/projeto
+type: project
+area: Projetos
+status: ativo
+created: 2026-07-05
+updated: 2026-07-05
 ---
+
 # 🎙️ Roadmap — Assistente Virtual Pessoal ("AMEA AI")
 
 

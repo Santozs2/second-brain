@@ -1,15 +1,15 @@
 ---
 type: tech
+area: Estudos
+status: aprendendo
+tecnologia: Git
 tags:
   - tech
   - estudo
   - ferramentas
-tecnologia: Git
-status: aprendendo
 created: 2026-06-30
 updated: 2026-06-30
 ---
-
 # Git
 
 > [!tip] Status

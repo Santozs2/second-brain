@@ -1,12 +1,12 @@
 ---
 type: moc
+area: Snippets
+status: ativo
 tags:
   - moc
 created: 2026-07-05
 updated: 2026-07-05
-status: ativo
 ---
-
 # 🧩 Snippets
 
 > Trechos de código prontos, organizados por linguagem.

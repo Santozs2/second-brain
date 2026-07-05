@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: beginner
 id: cs-set-theory
-created: 2026-07-05
-updated: 2026-07-05
 category: Mathematics
 tags:
-  - type/concept
-  - domain/mathematics
-  - difficulty/beginner
+  - mathematics
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🔢 Set Theory
 
 > Matemática de coleções de elementos.

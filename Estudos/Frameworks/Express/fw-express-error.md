@@ -1,10 +1,11 @@
 ---
-type: technology
+type: tech
+area: Estudos
 id: fw-express-error
-created: 2026-07-05
 category: Express
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🚂 Express - Error Handling
 ```javascript
 app.use((err, req, res, next) => {

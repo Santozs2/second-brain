@@ -1,11 +1,11 @@
 ---
-type: technology
+type: tech
+area: Estudos
 id: lang-js-ecosystem
+category: JavaScript
 created: 2026-07-05
 updated: 2026-07-05
-category: JavaScript
 ---
-
 # 🟨 JavaScript - Ecosystem
 
 ---

@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: beginner
 id: cs-stack
-created: 2026-07-04
-updated: 2026-07-04
 category: Data Structures
 tags:
-  - type/concept
-  - domain/data-structures
-  - difficulty/beginner
+  - data-structures
+created: 2026-07-04
+updated: 2026-07-04
 ---
-
 # 📚 Stack (Pilha)
 
 > LIFO - Last In First Out. Como pilhar pratos.

@@ -1,10 +1,11 @@
 ---
-type: technology
+type: tech
+area: Estudos
 id: fw-react-lifecycle
-created: 2026-07-05
 category: React
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # ⚛️ React - Component Lifecycle
 
 ---

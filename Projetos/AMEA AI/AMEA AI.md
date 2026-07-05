@@ -1,16 +1,16 @@
 ---
 type: goal
+area: Projetos
 status: 🟡 Em Planejamento
 priority: 🔥 Alta
-created: 2026-06-30
-updated: 2026-06-30
 tags:
   - project
   - ai
   - agent
   - long-term
+created: 2026-06-30
+updated: 2026-06-30
 ---
-
 # 🤖 AMEA — Artificial Mind for Engineering & Assistance
 
 > "Uma IA pessoal construída para aprender comigo, evoluir comigo e aumentar minha produtividade."
@@ -421,6 +421,16 @@ Responsável por:
 - OAuth
 - WebSockets
 - Testes Automatizados
+
+---
+
+# 🔗 Relacionado no Vault
+
+- **Frontend:** [[Next.js|Next.js]] · [[React|React]] · [[TypeScript|TypeScript]]
+- **Backend:** [[Python|Python]] · [[Banco de Dados|Banco de Dados]]
+- **Infra:** [[Docker|Docker]] · [[Linux|Linux]]
+- **Conceitos:** [[cs-websocket|WebSockets]] · [[Cache|Cache]] · [[JWT|JWT]]
+- **Roadmap detalhado:** [[Roadmap AMEA IA|Roadmap AMEA AI]]
 
 ---
 

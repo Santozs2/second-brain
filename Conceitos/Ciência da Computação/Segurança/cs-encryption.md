@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: intermediate
 id: cs-encryption
-created: 2026-07-05
-updated: 2026-07-05
 category: Security
 tags:
-  - type/concept
-  - domain/security
-  - difficulty/intermediate
+  - security
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🔐 Encryption
 
 > Transformar dados legíveis em ilegíveis sem chave.

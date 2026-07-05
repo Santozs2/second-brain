@@ -1,16 +1,16 @@
 ---
 type: tech
+area: Estudos
+status: aprendendo
+tecnologia: JavaScript
 tags:
   - tech
   - estudo
   - frontend
   - backend
-tecnologia: JavaScript
-status: aprendendo
 created: 2026-06-30
 updated: 2026-06-30
 ---
-
 # JavaScript
 
 > [!tip] Status
@@ -60,8 +60,12 @@ async function getUsuarios() {
 
 - [[HTTP|HTTP]]
 
+## 📖 Aprofundar
+
+- [[lang-js-overview|Guia detalhado de JavaScript]] — sintaxe, async, OOP, funcional e ecossistema
+
 ## 🔗 Veja também
 
 - [[TypeScript|TypeScript]]
 - [[React|React]]
-- [[JavaScript|Snippets de JavaScript]]
+- [[Snippets - JavaScript|Snippets de JavaScript]]

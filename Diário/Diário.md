@@ -1,12 +1,12 @@
 ---
 type: journal
+area: Diário
+status: ativo
 tags:
   - journal
 created: 2026-06-30
 updated: 2026-06-30
-status: ativo
 ---
-
 # 📔 Diário
 
 > [!tip] Sobre esta página

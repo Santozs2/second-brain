@@ -84,7 +84,14 @@
       "Bash(for f:*)",
       "Bash(rm -f System/Templates/concept.md System/Templates/moc.md System/Templates/project.md System/Templates/resource.md System/Templates/snippet.md System/Templates/technology.md)",
       "Bash(rmdir System/Config System/Guides)",
-      "Bash(find . -type d -not -path ./.git* -not -path ./.obsidian* -not -path ./.claude*)"
+      "Bash(find . -type d -not -path ./.git* -not -path ./.obsidian* -not -path ./.claude*)",
+      "Bash(find . -name \"*.md\" -not -path './.git/*' -not -path './.obsidian/*' -not -path './.claude/*' -exec basename {} .md)",
+      "Bash(grep -vE \"^\\(<%|\\\\`|[0-9]|float|$\\)\")",
+      "Bash(python System/_normalize_fm.py)",
+      "Bash(sed -n '1,12p' \"Conceitos/Ciência da Computação/Algoritmos/cs-sorting-algorithms.md\")",
+      "Bash(sed -n '1,12p' \"Estudos/Frameworks/React/fw-react-hooks.md\")",
+      "Bash(sed -n '1,14p' \"Estudos/Linguagens/JavaScript/JavaScript.md\")",
+      "Bash(python -c \":*)"
     ]
   }
 }

@@ -1,10 +1,11 @@
 ---
-type: technology
+type: tech
+area: Estudos
 id: fw-angular-routing
-created: 2026-07-05
 category: Angular
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🅰️ Angular - Routing
 
 ---

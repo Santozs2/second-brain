@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: advanced
 id: cs-recurrence-relations
-created: 2026-07-05
-updated: 2026-07-05
 category: Mathematics
 tags:
-  - type/concept
-  - domain/mathematics
-  - difficulty/advanced
+  - mathematics
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🔄 Recurrence Relations
 
 > Relação recursiva entre termos.

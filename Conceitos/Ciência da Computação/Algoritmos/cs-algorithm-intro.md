@@ -1,16 +1,15 @@
 ---
 type: concept
+area: Conceitos
+status: stable
+difficulty: beginner
 id: cs-algo-intro
-created: 2026-07-04
-updated: 2026-07-04
 category: Algorithms
 tags:
-  - type/concept
-  - domain/algorithms
-  - status/stable
-  - difficulty/beginner
+  - algorithms
+created: 2026-07-04
+updated: 2026-07-04
 ---
-
 # 📊 Introdução a Algoritmos
 
 > Um algoritmo é uma sequência finita de operações bem-definidas para resolver um problema.

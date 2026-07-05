@@ -1,13 +1,13 @@
 ---
 type: resource
+area: Recursos
+status: ativo
+tipo: curso
 tags:
   - resource
-tipo: curso
 created: 2026-06-30
 updated: 2026-06-30
-status: ativo
 ---
-
 # 🎓 Cursos
 
 | Curso                      | Plataforma            | Status    | Link    |

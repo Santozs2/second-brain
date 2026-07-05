@@ -1,15 +1,15 @@
 ---
 type: tech
+area: Estudos
+status: aprendendo
+tecnologia: Django
 tags:
   - tech
   - estudo
   - backend
-tecnologia: Django
-status: aprendendo
 created: 2026-06-30
 updated: 2026-06-30
 ---
-
 # Django
 
 > [!tip] Status

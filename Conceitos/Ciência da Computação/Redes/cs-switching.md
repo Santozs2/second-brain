@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: intermediate
 id: cs-switching
-created: 2026-07-05
-updated: 2026-07-05
 category: Networking
 tags:
-  - type/concept
-  - domain/networking
-  - difficulty/intermediate
+  - networking
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🔄 Network Switching
 
 ---

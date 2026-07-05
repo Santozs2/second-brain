@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: beginner
 id: cs-asymptotic-analysis
-created: 2026-07-05
-updated: 2026-07-05
 category: Complexity
 tags:
-  - type/concept
-  - domain/complexity
-  - difficulty/beginner
+  - complexity
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 📐 Asymptotic Analysis
 
 > Notação matemática para descrever comportamento de funções.

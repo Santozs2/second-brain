@@ -1,13 +1,13 @@
 ---
 type: snippet
+area: Snippets
+status: estavel
+linguagem: SQL
 tags:
   - snippet
-linguagem: SQL
 created: 2026-06-30
 updated: 2026-06-30
-status: estavel
 ---
-
 # 🧩 Snippets de SQL
 
 > [!tip] Como usar

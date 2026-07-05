@@ -1,12 +1,12 @@
 ---
 type: dashboard
+area: Home
+status: ativo
 tags:
   - dashboard
 created: 2026-06-30
 updated: 2026-06-30
-status: ativo
 ---
-
 # 📖 Como usar este Vault
 
 Bem-vindo(a). Este Vault foi pensado para ser simples no dia a dia e, ao mesmo tempo, bem conectado — como uma pequena enciclopédia pessoal do que você está aprendendo e construindo.

@@ -1,14 +1,13 @@
 ---
-type: technology
+type: tech
+area: Estudos
 id: lang-js-async
-created: 2026-07-05
-updated: 2026-07-05
 category: JavaScript
 tags:
-  - type/technology
-  - language/javascript
+  - javascript
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🟨 JavaScript - Async Programming
 
 ---

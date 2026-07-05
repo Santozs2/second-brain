@@ -1,10 +1,11 @@
 ---
-type: technology
+type: tech
+area: Estudos
 id: fw-solidjs-overview
-created: 2026-07-05
 category: SolidJS
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🟦 SolidJS - Complete Guide
 
 ---

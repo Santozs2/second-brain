@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: advanced
 id: cs-gpu
-created: 2026-07-05
-updated: 2026-07-05
 category: Hardware
 tags:
-  - type/concept
-  - domain/hardware
-  - difficulty/advanced
+  - hardware
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🎮 GPU (Graphics Processing Unit)
 
 > Paralelo massivo - 1000+ cores vs 8-16 cores CPU.

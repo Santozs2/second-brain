@@ -1,15 +1,14 @@
 ---
-type: technology
+type: tech
+area: Estudos
 id: lang-py-syntax
-created: 2026-07-05
-updated: 2026-07-05
 category: Python
 tags:
-  - type/technology
-  - domain/backend
-  - language/python
+  - backend
+  - python
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🐍 Python - Syntax & Types
 
 ---

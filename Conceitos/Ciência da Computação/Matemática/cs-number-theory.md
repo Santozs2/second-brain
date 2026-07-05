@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: intermediate
 id: cs-number-theory
-created: 2026-07-05
-updated: 2026-07-05
 category: Mathematics
 tags:
-  - type/concept
-  - domain/mathematics
-  - difficulty/intermediate
+  - mathematics
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🔢 Number Theory
 
 > Propriedades dos números inteiros.

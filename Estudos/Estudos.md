@@ -1,12 +1,12 @@
 ---
 type: moc
+area: Estudos
+status: ativo
 tags:
   - moc
 created: 2026-07-05
 updated: 2026-07-05
-status: ativo
 ---
-
 # 📚 Estudos
 
 > Uma nota por tecnologia. Navegue pelas pastas ou pelas listas abaixo.

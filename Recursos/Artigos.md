@@ -1,13 +1,13 @@
 ---
 type: resource
+area: Recursos
+status: ativo
+tipo: artigo
 tags:
   - resource
-tipo: artigo
 created: 2026-06-30
 updated: 2026-06-30
-status: ativo
 ---
-
 # 📰 Artigos
 
 | Artigo | Fonte | Status | Link |

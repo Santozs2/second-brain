@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: beginner
 id: cs-http
-created: 2026-07-05
-updated: 2026-07-05
 category: Networking
 tags:
-  - type/concept
-  - domain/networking
-  - difficulty/beginner
+  - networking
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🌐 HTTP
 
 > HyperText Transfer Protocol - Protocolo da Web.
@@ -76,7 +75,7 @@ Etag usado para validação
 
 ## 🔗 Relacionado
 
-- [[cs-https-ssl-tls|HTTPS/TLS]]
+- [[cs-ssl-tls|HTTPS/TLS]]
 - [[cs-tcp|TCP]]
 
 ---

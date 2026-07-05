@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: advanced
 id: cs-graph-algorithms
-created: 2026-07-05
-updated: 2026-07-05
 category: Algorithms
 tags:
-  - type/concept
-  - domain/algorithms
-  - difficulty/advanced
+  - algorithms
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 🔍 Graph Algorithms
 
 > Algoritmos para busca, caminho mais curto, e mais.

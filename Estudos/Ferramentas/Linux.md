@@ -1,14 +1,16 @@
 ---
 type: tech
+area: Estudos
+status: aprendendo
+tecnologia: Linux
 tags:
   - tech
   - estudo
   - devops
-tecnologia: Linux
-status: aprendendo
 created: 2026-06-30
 updated: 2026-06-30
 ---
+
 # Linux
 
 > [!tip] Status

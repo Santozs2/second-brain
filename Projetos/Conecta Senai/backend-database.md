@@ -1,12 +1,12 @@
 ---
 type: project
+area: Projetos
+status: em-andamento
 tags:
   - project
 created: 2026-06-30
 updated: 2026-06-30
-status: em-andamento
 ---
-
 # Banco de Dados — Conecta SENAI
 
 ```mermaid

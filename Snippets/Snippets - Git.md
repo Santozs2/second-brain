@@ -1,13 +1,13 @@
 ---
 type: snippet
+area: Snippets
+status: estavel
+linguagem: Git
 tags:
   - snippet
-linguagem: Git
 created: 2026-06-30
 updated: 2026-06-30
-status: estavel
 ---
-
 # 🧩 Snippets de Git
 
 > [!tip] Como usar

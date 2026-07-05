@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: beginner
 id: cs-queue
-created: 2026-07-04
-updated: 2026-07-04
 category: Data Structures
 tags:
-  - type/concept
-  - domain/data-structures
-  - difficulty/beginner
+  - data-structures
+created: 2026-07-04
+updated: 2026-07-04
 ---
-
 # 🚗 Queue (Fila)
 
 > FIFO - First In First Out. Como fila de banco.

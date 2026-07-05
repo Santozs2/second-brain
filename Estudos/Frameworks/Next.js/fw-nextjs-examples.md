@@ -1,10 +1,11 @@
 ---
-type: technology
+type: tech
+area: Estudos
 id: fw-nextjs-examples
-created: 2026-07-05
 category: Next.js
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # ⚡ Next.js - Code Examples
 
 ---

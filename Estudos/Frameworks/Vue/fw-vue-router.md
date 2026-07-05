@@ -1,10 +1,11 @@
 ---
-type: technology
+type: tech
+area: Estudos
 id: fw-vue-router
-created: 2026-07-05
 category: Vue
+created: 2026-07-05
+updated: 2026-07-05
 ---
-
 # 💚 Vue - Vue Router
 
 ---

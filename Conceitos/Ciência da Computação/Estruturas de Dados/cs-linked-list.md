@@ -1,15 +1,14 @@
 ---
 type: concept
+area: Conceitos
+difficulty: intermediate
 id: cs-linked-list
-created: 2026-07-04
-updated: 2026-07-04
 category: Data Structures
 tags:
-  - type/concept
-  - domain/data-structures
-  - difficulty/intermediate
+  - data-structures
+created: 2026-07-04
+updated: 2026-07-04
 ---
-
 # 🔗 Linked List
 
 > Coleção dinâmica onde cada nó aponta para o próximo.
