@@ -144,9 +144,10 @@ Sem ciclos, usado em scheduling
 
 ## 🔗 Relacionado
 
-- [[cs-graph-bfs|BFS]]
-- [[cs-graph-dfs|DFS]]
-- [[cs-dijkstra|Dijkstra]]
+- [[cs-graph-algorithms#1️⃣ BFS (Breadth First Search)|BFS]]
+- [[cs-graph-algorithms#2️⃣ DFS (Depth First Search)|DFS]]
+- [[cs-graph-algorithms#3️⃣ Dijkstra (Caminho Mais Curto)|Dijkstra]]
+- [[cs-graph-algorithms|Graph Algorithms]]
 - [[cs-tree|Tree]]
 
 ---

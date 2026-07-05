@@ -143,7 +143,7 @@ def heapify(arr):
 
 - [[cs-tree|Tree]]
 - [[cs-sorting-algorithms|Heap Sort]]
-- [[cs-dijkstra|Dijkstra]]
+- [[cs-graph-algorithms#3️⃣ Dijkstra (Caminho Mais Curto)|Dijkstra]]
 
 ---
 

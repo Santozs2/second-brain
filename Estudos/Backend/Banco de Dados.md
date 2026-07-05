@@ -73,5 +73,5 @@ CREATE TABLE tarefas (
 
 - [[Django|Django]]
 - [[Docker|Docker]]
-- [[SQL|Snippets de SQL]]
+- [[Snippets - SQL|Snippets de SQL]]
 

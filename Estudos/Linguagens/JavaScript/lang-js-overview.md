@@ -385,15 +385,14 @@ Frameworks Populares:
 - [[JavaScript|Nota principal — JavaScript]]
 
 ### Linguagens Relacionadas
-- [[lang-ts-overview|TypeScript]] - JS com tipos estáticos
+- [[TypeScript|TypeScript]] - JS com tipos estáticos
 - [[lang-py-overview|Python]] - Backend alternativo
-- [[lang-go-overview|Go]] - Backend performático
 
 ### Conceitos
-- [[Asynchronous|Asincronismo]]
-- [[EventLoop|Event Loop]]
-- [[Closures|Closures]]
-- [[Prototypes|Prototypal Inheritance]]
+- [[lang-js-async|Asincronismo]]
+- [[lang-js-async|Event Loop]]
+- [[lang-js-functional|Closures]]
+- [[lang-js-oop|Prototypal Inheritance]]
 
 ### Frameworks
 - [[React|React]] - UI library
