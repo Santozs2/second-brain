@@ -55,3 +55,10 @@ TCP/IP: Prático (4 layers)
 - [[cs-dns]]
 - [[cs-http]]
 - [[cs-load-balancing]]
+
+## 🔗 Relacionado
+
+- [[cs-network-intro|Introdução a Redes]]
+- [[cs-tcp-ip|TCP/IP]]
+- [[cs-tcp|TCP]]
+- [[cs-switching|Switching]]

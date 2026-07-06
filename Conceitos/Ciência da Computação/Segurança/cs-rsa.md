@@ -77,3 +77,10 @@ Muito difícil para n de 2048 bits
 - [[cs-aes]]
 - [[cs-authentication]]
 - [[cs-csrf]]
+
+## 🔗 Relacionado
+
+- [[cs-encryption|Criptografia]]
+- [[cs-aes|AES]]
+- [[cs-ssl-tls|SSL/TLS]]
+- [[cs-number-theory|Teoria dos Números]]

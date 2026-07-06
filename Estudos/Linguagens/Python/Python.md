@@ -65,5 +65,10 @@ class Usuario:
 ## 🔗 Veja também
 
 - [[Django|Django]]
+- [[Django REST Framework|Django REST Framework]]
 - [[Banco de Dados|Banco de Dados]]
 - [[Snippets - Python|Snippets de Python]]
+
+## 🔤 Outras linguagens
+
+- [[lang-go-overview|Go]] · [[JavaScript|JavaScript]] · [[TypeScript|TypeScript]]

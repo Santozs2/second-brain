@@ -36,3 +36,8 @@ updated: 2026-07-05
 - [[cs-dns]]
 - [[cs-http]]
 - [[cs-routing]]
+
+## 🔗 Relacionado
+
+- [[cs-proxy|Proxy]]
+- [[cs-routing|Roteamento]]

@@ -64,6 +64,12 @@ async function getUsuarios() {
 
 - [[lang-js-overview|Guia detalhado de JavaScript]] — sintaxe, async, OOP, funcional e ecossistema
 
+## 🧱 Frameworks e runtimes
+
+- **Runtime/Backend:** [[Node.js|Node.js]] · [[Express|Express]]
+- **Frontend:** [[React|React]] · [[Vue|Vue]] · [[Angular|Angular]] · [[Svelte|Svelte]] · [[SolidJS|SolidJS]]
+- **Full-stack:** [[Next.js|Next.js]] · [[Nuxt|Nuxt]]
+
 ## 🔗 Veja também
 
 - [[TypeScript|TypeScript]]

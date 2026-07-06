@@ -54,3 +54,10 @@ IPv6: 2001:db8::1 (128 bits, hexa)
 - [[cs-dns]]
 - [[cs-http]]
 - [[cs-load-balancing]]
+
+## 🔗 Relacionado
+
+- [[cs-tcp|TCP]]
+- [[cs-udp|UDP]]
+- [[cs-osi-model|Modelo OSI]]
+- [[cs-routing|Roteamento]]

@@ -79,3 +79,9 @@ JavaScript não consegue acessar
 - [[cs-aes]]
 - [[cs-authentication]]
 - [[cs-csrf]]
+
+## 🔗 Relacionado
+
+- [[cs-csrf|CSRF]]
+- [[cs-sql-injection|SQL Injection]]
+- [[cs-authentication|Autenticação]]

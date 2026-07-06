@@ -16,6 +16,7 @@ updated: 2026-06-30
 - [[Arquitetura#Backend|Backend]]
 - [[Arquitetura#Frontend|Frontend]]
 - [[Banco de Dados|Banco de Dados]]
+- [[backend-database|Esquema do Banco (ER)]]
 - [[API]]
 - [[Roadmap]]
 - [[Deploy]]

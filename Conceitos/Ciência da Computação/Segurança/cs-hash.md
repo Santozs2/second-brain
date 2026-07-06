@@ -71,3 +71,9 @@ Melhor para senhas (resiste brute force)
 - [[cs-aes]]
 - [[cs-authentication]]
 - [[cs-csrf]]
+
+## 🔗 Relacionado
+
+- [[cs-encryption|Criptografia]]
+- [[cs-authentication|Autenticação]]
+- [[cs-rsa|RSA]]

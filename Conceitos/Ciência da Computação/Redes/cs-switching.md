@@ -35,3 +35,9 @@ updated: 2026-07-05
 - [[cs-dns]]
 - [[cs-http]]
 - [[cs-load-balancing]]
+
+## 🔗 Relacionado
+
+- [[cs-routing|Roteamento]]
+- [[cs-network-intro|Introdução a Redes]]
+- [[cs-osi-model|Modelo OSI]]

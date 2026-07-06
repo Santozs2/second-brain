@@ -62,3 +62,9 @@ server.sendto(b'Response', addr)
 - [[cs-dns]]
 - [[cs-http]]
 - [[cs-load-balancing]]
+
+## 🔗 Relacionado
+
+- [[cs-tcp|TCP]]
+- [[cs-udp|UDP]]
+- [[cs-websocket|WebSocket]]

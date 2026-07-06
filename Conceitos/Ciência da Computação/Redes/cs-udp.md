@@ -58,3 +58,10 @@ UDP: Rápido, não confiável, sem conexão
 - [[cs-dns]]
 - [[cs-http]]
 - [[cs-load-balancing]]
+
+## 🔗 Relacionado
+
+- [[cs-tcp|TCP]]
+- [[cs-tcp-ip|TCP/IP]]
+- [[cs-socket-programming|Socket Programming]]
+- [[cs-websocket|WebSocket]]

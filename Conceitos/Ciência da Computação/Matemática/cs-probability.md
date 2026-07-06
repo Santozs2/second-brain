@@ -71,3 +71,9 @@ P(A|B) = P(B|A) * P(A) / P(B)
 - [[cs-boolean-logic]]
 - [[cs-combinatorics]]
 - [[cs-linear-algebra]]
+
+## 🔗 Relacionado
+
+- [[cs-combinatorics|Combinatória]]
+- [[cs-asymptotic-analysis|Análise Assintótica]]
+- [[cs-set-theory|Teoria dos Conjuntos]]

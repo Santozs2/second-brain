@@ -60,3 +60,9 @@ Solução: aumentar RAM ou reduzir working set
 - [[cs-alu-design]]
 - [[cs-cpu-architecture]]
 - [[cs-gpu]]
+
+## 🔗 Relacionado
+
+- [[cs-memory-hierarchy|Hierarquia de Memória]]
+- [[cs-memory-management|Gerência de Memória]]
+- [[cs-cpu-architecture|Arquitetura de CPU]]

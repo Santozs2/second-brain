@@ -76,3 +76,9 @@ De Morgan:      (A ∪ B)' = A' ∩ B'
 - [[cs-boolean-logic]]
 - [[cs-combinatorics]]
 - [[cs-linear-algebra]]
+
+## 🔗 Relacionado
+
+- [[cs-boolean-logic|Lógica Booleana]]
+- [[cs-combinatorics|Combinatória]]
+- [[cs-probability|Probabilidade]]

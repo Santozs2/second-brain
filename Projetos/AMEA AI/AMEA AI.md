@@ -430,6 +430,7 @@ Responsável por:
 - **Backend:** [[Python|Python]] · [[Banco de Dados|Banco de Dados]]
 - **Infra:** [[Docker|Docker]] · [[Linux|Linux]]
 - **Conceitos:** [[cs-websocket|WebSockets]] · [[Cache|Cache]] · [[JWT|JWT]]
+- **Estudos relacionados:** [[ai-voice-assistant|Assistente de Voz com IA]]
 - **Roadmap detalhado:** [[Roadmap AMEA IA|Roadmap AMEA AI]]
 
 ---

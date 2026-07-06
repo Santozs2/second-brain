@@ -77,3 +77,9 @@ Fragmentação externa possível
 - [[cs-disk-io]]
 - [[cs-file-system]]
 - [[cs-garbage-collection]]
+
+## 🔗 Relacionado
+
+- [[cs-virtual-memory|Memória Virtual]]
+- [[cs-process|Processos]]
+- [[cs-scheduling|Escalonamento]]

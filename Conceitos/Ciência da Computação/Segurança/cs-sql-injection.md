@@ -83,3 +83,9 @@ Só SELECT, não DELETE/UPDATE
 - [[cs-aes]]
 - [[cs-authentication]]
 - [[cs-csrf]]
+
+## 🔗 Relacionado
+
+- [[cs-xss|XSS]]
+- [[cs-csrf|CSRF]]
+- [[cs-authentication|Autenticação]]

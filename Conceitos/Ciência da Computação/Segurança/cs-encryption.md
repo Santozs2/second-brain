@@ -60,3 +60,9 @@ distinguir entre encrypção de 2 mensagens
 ---
 
 **Status:** ✅ Completo
+
+## 🔗 Relacionado
+
+- [[cs-hash|Hashing]]
+- [[cs-rsa|RSA]]
+- [[cs-aes|AES]]

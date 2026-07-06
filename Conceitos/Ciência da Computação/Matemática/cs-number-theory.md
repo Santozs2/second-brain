@@ -86,3 +86,9 @@ def pow_mod(base, exp, mod):
 - [[cs-boolean-logic]]
 - [[cs-combinatorics]]
 - [[cs-linear-algebra]]
+
+## 🔗 Relacionado
+
+- [[cs-rsa|RSA]]
+- [[cs-encryption|Criptografia]]
+- [[cs-combinatorics|Combinatória]]

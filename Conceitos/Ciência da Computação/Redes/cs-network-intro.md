@@ -48,3 +48,10 @@ Ambos importantes!
 - [[cs-dns]]
 - [[cs-http]]
 - [[cs-load-balancing]]
+
+## 🔗 Relacionado
+
+- [[cs-osi-model|Modelo OSI]]
+- [[cs-tcp-ip|TCP/IP]]
+- [[cs-tcp|TCP]]
+- [[cs-udp|UDP]]

@@ -59,6 +59,11 @@ function saudacao(usuario: Usuario): string {
 ## 🗒️ Notas pessoais
 
 
+## 🧱 Frameworks TypeScript-first
+
+- [[Angular|Angular]] · [[Next.js|Next.js]] · [[Nuxt|Nuxt]] · [[SolidJS|SolidJS]] · [[Svelte|Svelte]]
+- [[Node.js|Node.js]] · [[Express|Express]] no backend
+
 ## 🔗 Veja também
 
 - [[JavaScript|JavaScript]]

@@ -43,3 +43,9 @@ Load balancing, caching
 - [[cs-dns]]
 - [[cs-http]]
 - [[cs-load-balancing]]
+
+## 🔗 Relacionado
+
+- [[cs-http|HTTP]]
+- [[cs-load-balancing|Load Balancing]]
+- [[cs-ssl-tls|SSL/TLS]]
