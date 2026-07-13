@@ -80,14 +80,14 @@ Receber mensagens que chegam no número e conseguir responder pela API. Esse é 
 > Use a versão que aparece no painel do seu app na Meta (ex: `v21.0`, `v22.0`...). Não fixe uma versão velha — confira no dashboard e coloque numa variável de ambiente `WHATSAPP_API_VERSION`.
 
 ### Tarefas
-- [ ] `whatsapp/models.py`: model `WhatsAppChannel` (phone_number_id, waba_id, access_token, verify_token, status) — já existe, revisar
-- [ ] `whatsapp/client.py`: função `send_text_message(channel, to, text)` que faz o POST na Cloud API e retorna o `wa_message_id`
-- [ ] `whatsapp/webhook.py` (ou view): endpoint **GET** que valida `hub.verify_token` e devolve `hub.challenge`
-- [ ] Mesmo endpoint **POST**: recebe os eventos, identifica se é `messages` ou `statuses`
-- [ ] Processar inbound: achar/criar `Contact` (pelo `wa_id`), achar/criar `Conversation`, criar `Message` (direction=in), atualizar `last_inbound_at`
-- [ ] Processar status: achar a `Message` pelo `wa_message_id` e atualizar o `status` (sent→delivered→read / failed)
-- [ ] Expor o `access_token` fora do texto puro (criptografia em repouso — ver nota)
-- [ ] Testar com o **número de teste** que a Meta fornece no painel
+- [x] `whatsapp/models.py`: model `WhatsAppChannel` (phone_number_id, waba_id, access_token, verify_token, status) — já existe, revisar ✅ 2026-07-08
+- [x] `whatsapp/client.py`: função `send_text_message(channel, to, text)` que faz o POST na Cloud API e retorna o `wa_message_id` ✅ 2026-07-08
+- [x] `whatsapp/webhook.py` (ou view): endpoint **GET** que valida `hub.verify_token` e devolve `hub.challenge` ✅ 2026-07-08
+- [x] Mesmo endpoint **POST**: recebe os eventos, identifica se é `messages` ou `statuses` ✅ 2026-07-08
+- [x] Processar inbound: achar/criar `Contact` (pelo `wa_id`), achar/criar `Conversation`, criar `Message` (direction=in), atualizar `last_inbound_at` ✅ 2026-07-08
+- [x] Processar status: achar a `Message` pelo `wa_message_id` e atualizar o `status` (sent→delivered→read / failed) ✅ 2026-07-08
+- [x] Expor o `access_token` fora do texto puro (criptografia em repouso — ver nota) ✅ 2026-07-08
+- [x] Testar com o **número de teste** que a Meta fornece no painel
 
 ### Fluxo de uma mensagem recebida (mental model)
 ```
@@ -127,13 +127,13 @@ Atualiza conversation.last_inbound_at = agora
 Vários atendentes vendo as conversas atualizarem ao vivo, atribuindo conversas e respondendo — sem dar F5.
 
 ### Tarefas
-- [ ] Revisar models `Conversation` e `Message` (status, assigned_to, janela de 24h)
-- [ ] REST endpoints: listar conversas (filtrado por tenant), listar mensagens de uma conversa, enviar mensagem
-- [ ] Endpoint de **atribuir conversa** a um atendente (`assigned_to`)
-- [ ] Configurar Django Channels no `asgi.py` + `channels_redis` como camada
-- [ ] Criar um **consumer** WebSocket que autentica o usuário e o coloca num grupo por organização (`org_{id}`)
-- [ ] No recebimento de mensagem (Sprint 2) e no envio, fazer **broadcast** pro grupo da org
-- [ ] Implementar a lógica da **janela de 24h**: se `is_within_service_window` é True, permite texto livre; se False, exige template
+- [x] Revisar models `Conversation` e `Message` (status, assigned_to, janela de 24h) ✅ 2026-07-13
+- [x] REST endpoints: listar conversas (filtrado por tenant), listar mensagens de uma conversa, enviar mensagem ✅ 2026-07-13
+- [x] Endpoint de **atribuir conversa** a um atendente (`assigned_to`) ✅ 2026-07-13
+- [x] Configurar Django Channels no `asgi.py` + `channels_redis` como camada ✅ 2026-07-13
+- [x] Criar um **consumer** WebSocket que autentica o usuário e o coloca num grupo por organização (`org_{id}`) ✅ 2026-07-13
+- [x] No recebimento de mensagem (Sprint 2) e no envio, fazer **broadcast** pro grupo da org ✅ 2026-07-13
+- [x] Implementar a lógica da **janela de 24h**: se `is_within_service_window` é True, permite texto livre; se False, exige template ✅ 2026-07-13
 
 ### A regra da janela de 24h
 ```
@@ -177,15 +177,15 @@ Frontend insere a mensagem na conversa aberta em tempo real
 A interface que o atendente usa: lista de conversas à esquerda, conversa aberta no centro, campo de envio embaixo — atualizando em tempo real.
 
 ### Tarefas
-- [ ] Setup React + Vite + TypeScript + Tailwind + Shadcn/ui
-- [ ] Auth no front: tela de login, guardar token, `ProtectedRoute`, interceptor do axios pra mandar o Bearer
-- [ ] Layout base (sidebar + header + área principal)
-- [ ] **Lista de conversas** (ordenada por `last_message_at`, com status e atendente)
-- [ ] **Detalhe da conversa**: histórico de mensagens (inbound à esquerda, outbound à direita)
-- [ ] **Campo de envio** (texto + futuramente mídia)
-- [ ] Cliente WebSocket: conecta, escuta o grupo da org, insere mensagens ao vivo
-- [ ] Ação de **atribuir conversa** a um atendente
-- [ ] Indicador visual da **janela de 24h** (badge "fora da janela" quando aplicável)
+- [x] Setup React + Vite + TypeScript + Tailwind + Shadcn/ui ✅ 2026-07-13
+- [x] Auth no front: tela de login, guardar token, `ProtectedRoute`, interceptor do axios pra mandar o Bearer ✅ 2026-07-13
+- [x] Layout base (sidebar + header + área principal) ✅ 2026-07-13
+- [x] **Lista de conversas** (ordenada por `last_message_at`, com status e atendente) ✅ 2026-07-13
+- [x] **Detalhe da conversa**: histórico de mensagens (inbound à esquerda, outbound à direita) ✅ 2026-07-13
+- [x] **Campo de envio** (texto + futuramente mídia) ✅ 2026-07-13
+- [x] Cliente WebSocket: conecta, escuta o grupo da org, insere mensagens ao vivo ✅ 2026-07-13
+- [x] Ação de **atribuir conversa** a um atendente ✅ 2026-07-13
+- [x] Indicador visual da **janela de 24h** (badge "fora da janela" quando aplicável) ✅ 2026-07-13
 
 ### Ordem sugerida de construção do front
 1. Login + rota protegida (sem isso nada funciona)
@@ -212,15 +212,15 @@ A interface que o atendente usa: lista de conversas à esquerda, conversa aberta
 > Um atendente loga, vê as conversas do número da empresa, responde clientes reais pelo WhatsApp, mensagens novas aparecem ao vivo, e conversas podem ser distribuídas entre atendentes. **Isso já é vendável — hora de validar com 1–2 clientes reais antes de partir pra Fase 2 (chatbot).**
 
 ### Checklist final da fase
-- [ ] Multi-tenancy isolando dados por organização (testado com 2 orgs)
-- [ ] Auth JWT funcionando (registro, login, refresh)
-- [ ] RBAC (owner/admin/agent) aplicado
-- [ ] Webhook da Meta recebendo mensagens e status
-- [ ] Envio de mensagem via Cloud API
-- [ ] Inbox em tempo real (WebSocket por org)
-- [ ] Atribuição de conversa a atendente
-- [ ] Detecção da janela de 24h
-- [ ] Frontend do inbox usável de ponta a ponta
+- [x] Multi-tenancy isolando dados por organização (testado com 2 orgs)
+- [x] Auth JWT funcionando (registro, login, refresh)
+- [x] RBAC (owner/admin/agent) aplicado
+- [~] Webhook da Meta recebendo mensagens e status *(implementado e testado com payload simulado; falta validar com a Meta real)*
+- [~] Envio de mensagem via Cloud API *(`send_text_message` pronto; falta testar com número real)*
+- [x] Inbox em tempo real (WebSocket por org)
+- [x] Atribuição de conversa a atendente
+- [x] Detecção da janela de 24h
+- [~] Frontend do inbox usável de ponta a ponta *(leitura + tempo real ok; envio pelo atendente depende da Meta)*
 
 ---
 

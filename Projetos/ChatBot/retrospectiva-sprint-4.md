@@ -12,7 +12,7 @@ criado: 2026-07-13
 # 📋 Retrospectiva — Sprint 4: Frontend do Inbox
 
 > [!success] Status: CONCLUÍDO (validado ao vivo no navegador)
-> O atendente **loga**, vê a **lista de conversas** numa sidebar, abre uma conversa e lê as **mensagens**, e mensagens novas **aparecem sozinhas** na tela (WebSocket), sem refresh. Toda a base de tempo real da Sprint 3 (Redis) finalmente virou tela. Falta só o envio pelo atendente (depende da Meta) e polimento visual.
+> O atendente **loga**, vê a **lista de conversas** numa sidebar (com avatares), abre uma conversa e lê as **mensagens** (com header do contato), e mensagens novas **aparecem sozinhas** na tela (WebSocket), sem refresh. Toda a base de tempo real da Sprint 3 (Redis) finalmente virou tela. Falta só o envio pelo atendente (depende da Meta).
 
 ## 🎯 Objetivo da Sprint
 Dar cara à Fase 1: consumir no frontend os endpoints REST e o WebSocket que já existiam, fechando o ciclo login → conversas → mensagens → tempo real. Construído no modo **hands-on** (o dev escreve o código; specs + revisão a cada passo).
@@ -31,6 +31,11 @@ Dar cara à Fase 1: consumir no frontend os endpoints REST e o WebSocket que já
 - **Tempo real** — segundo `useEffect` no `MessagePanel` abre `ws://localhost:8000/ws/inbox/?token=`, filtra por `conversation_id` e adiciona a mensagem ao vivo; **cleanup** fecha o socket ao trocar de conversa.
 - **Tipos** (`types.ts`) — `Conversation` e `Message` espelhando os serializers.
 - **Polimento de UX** (`MessagePanel.tsx`) — **scroll automático** pro fim (`useRef` + `scrollIntoView({ behavior: "smooth" })` num `useEffect([messages])` com âncora `<div ref={bottomRef} />`) e **timestamps** (HH:MM via `toLocaleTimeString`) embaixo de cada balão.
+- **Polimento visual do inbox** (avatares, header, estados) — inspirado num mock de app de chat:
+  - **Avatares** na `ConversationList` — círculo colorido com a inicial do contato (`contact_name ?? contact_wa_id`); cor **determinística** por nome (hash do `charCodeAt` → paleta fixa), então o mesmo contato mantém sempre a mesma cor.
+  - **Header do contato** no `MessagePanel` — avatar + nome + status da janela de atendimento (`is_within_service_window`). Pra isso o `Inbox` passou a guardar a **`Conversation` inteira** (não só o `id`) e o `MessagePanel` recebe `conversation` como prop.
+  - **Estados de loading / erro / vazio** nos dois componentes — `useState(false)` de `error` setado no `.catch(...)` do fetch (resetado no início junto do `setLoading(true)`), com mensagens distintas pra carregando, erro e lista vazia ("Nenhuma conversa/mensagem ainda").
+  - **Bolhas refinadas** — `rounded-2xl`, `max-w-[75%]`, inbound branco com borda sobre fundo `gray-50`, horário embaixo. Timestamp da última mensagem também na lista.
 
 ---
 
@@ -110,10 +115,10 @@ Dar cara à Fase 1: consumir no frontend os endpoints REST e o WebSocket que já
 - [x] Tela de conversa / mensagens (REST)
 - [x] Tempo real via WebSocket (com cleanup e filtro por conversa)
 - [x] Polimento inicial de UX: scroll automático pro fim + timestamps nos balões
-- [x] Commitado e pushado (5 commits de frontend)
+- [x] Polimento visual: avatares (inicial + cor determinística), header do contato, estados de loading/erro/vazio
+- [x] Commitado e pushado (frontend)
 - [ ] Enviar mensagem pelo atendente (input + `POST`) — esbarra na conta Meta
 - [ ] Reordenar/atualizar a sidebar ao vivo (hoje só a conversa aberta atualiza)
-- [ ] Polimento visual restante (avatares, estados de loading/erro)
 - [ ] Refresh automático do token (hoje: expirou → relogar)
 
 ---
@@ -122,7 +127,7 @@ Dar cara à Fase 1: consumir no frontend os endpoints REST e o WebSocket que já
 
 **Fecho da Fase 1 (lançável):**
 1. Envio pelo atendente — depende da conta **Meta** (número + token). Cria `Message` out + envia pela Graph API (`send_text_message` já existe).
-2. Polimento de UX no inbox (scroll automático, timestamps, avatar, estados vazios).
+2. Reordenar/atualizar a sidebar ao vivo (hoje só a conversa aberta atualiza em tempo real).
 3. Deploy: servir com Daphne/ASGI + Redis gerenciado.
 
 **Fase 2 — Construtor de chatbot** (só depois de validar a Fase 1 com cliente real):
