@@ -64,8 +64,13 @@ tags: [chatbot, whatsapp, django, react, contexto]
 - Envio bloqueado: status `failed` code `130497` "Business account is restricted from messaging users in this country".
 - `_process_statuses` loga `errors` do status → foi o que revelou o 130497.
 
+## access_token criptografado (commit `d27e870`)
+- `WhatsAppChannel.access_token` agora e `EncryptedTextField` (lib `encrypted_model_fields`). `INSTALLED_APPS` += `encrypted_model_fields`; `settings.FIELD_ENCRYPTION_KEY = env("FIELD_ENCRYPTION_KEY")` (chave Fernet no `.env`, placeholder no `.env.example`). Migration `whatsapp/0002` (AlterField, no-op de schema — DB continua text).
+- **PEGADINHA da migracao**: token antigo estava em TEXTO PURO no banco → depois do campo virar encrypted, leitura via ORM tenta descriptografar e QUEBRA. FIX: re-salvar o token 1x pra gravar cifrado. Ler o valor cru via SQL (`SELECT access_token`), NAO via `.get()` (que ja descriptografa). Re-salvar com instancia vazia da INSERT (`_state.adding=True`) → NotNull em organization_id; forcar UPDATE: `ch=WhatsAppChannel(pk=pk); ch._state.adding=False; ch._state.db='default'; ch.access_token=plain; ch.save(update_fields=['access_token'])`. Cifrado no banco comeca com `gAAAAA` (prefixo Fernet).
+- Gerar chave Fernet: `python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"`.
+- Teste de seguranca do banco (validado): (1) valor cru = cifra `gAAAAA...`, sem pedaco do token real; (2) nenhuma coluna text/varchar do schema `public` contem o token em texto puro; (3) chave errada → `InvalidToken` (ilegivel). A chave e a joia: nunca no git, secret manager em prod. Rotacao exige re-salvar todos os tokens (lib suporta lista de chaves: 1a cifra, resto so descriptografa).
+
 ## Pendencias conhecidas
-- Criptografar `access_token` (`EncryptedTextField`, lib `encrypted_model_fields` ja instalada; falta FIELD_ENCRYPTION_KEY + INSTALLED_APPS + migration).
 - Trocar token temporario por permanente via System User.
 
 ## Dicas de ambiente
