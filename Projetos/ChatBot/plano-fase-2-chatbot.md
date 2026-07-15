@@ -2,12 +2,18 @@
 tipo: planejamento
 projeto: ChatBot
 fase: 2
-status: planejado
+status: em-andamento
 tags: [chatbot, whatsapp, django, react, react-flow, fluxo, planejamento]
 ---
 
 > [!info] O que é isso
-> Plano da **Fase 2 — construtor de chatbot** (editor visual de fluxo + motor de execução). Só planejamento, sem código. A **regra de ouro** do roadmap continua: validar a Fase 1 com 1–2 clientes reais ANTES de construir isto. Este doc existe pra estar pronto quando a validação acontecer.
+> Plano da **Fase 2 — construtor de chatbot** (editor visual de fluxo + motor de execução). O usuário optou por antecipar a construção (S1 e S2 já feitos, ver [[#Progresso]]). A **regra de ouro** original era validar a Fase 1 com 1–2 clientes reais antes disto — decisão consciente de seguir em paralelo.
+
+> [!success] Progresso (atualizado 2026-07-15)
+> - **S1 — Dados + CRUD** ✅ (commit `1f64e61`). Models `Flow`/`FlowSession` (migration `flows/0001`), `FlowSerializer` + `FlowView(ModelViewSet)` com `activate`/`deactivate`, rota `/api/flows/`. Isolamento multi-tenant testado (invasão PASS).
+> - **S2 — Motor básico** ✅ (commit `f343563`). `flows/engine.py`: helpers de leitura do grafo, `_send_bot_text` (mensagens do bot com `sender_membership=None`), `run_session` (loop com trava `MAX_STEPS=50`), `trigger_inbound` (guards: humano/resolvida/sem-fluxo/sessão-existente). Fiado no webhook (`whatsapp/services._process_inbound`) com import preguiçoso pra evitar ciclo. Testado com rollback + mocks: 5 cenários PASS.
+> - **S3 — Interação** 🔜 PRÓXIMO (nós `question`/`condition`, retomar `waiting_input`, contexto).
+> - **S4 — Handoff** e **S5 — Editor React Flow**: pendentes.
 
 # Fase 2 — Construtor de Chatbot
 

@@ -31,7 +31,7 @@ tags: [chatbot, whatsapp, django, react, contexto]
 
 ## Roadmap
 - Fase 1 = Inbox multi-atendente. Sprint 1 fundacao, Sprint 2 Cloud API (webhook + client), Sprint 3 WebSocket (Redis), Sprint 4 frontend React — todos FEITOS. Atribuicao de conversas FEITA.
-- Fase 2 = construtor de chatbot (React Flow + motor de fluxo). SO planejada. Regra de ouro: lancar Fase 1 e validar com cliente real ANTES da Fase 2.
+- Fase 2 = construtor de chatbot (React Flow + motor de fluxo). EM ANDAMENTO: S1 (dados+CRUD) e S2 (motor basico) FEITOS. Ver secao "Fase 2 — Chatbot". Usuario optou por antecipar antes da validacao com cliente.
 
 ## Sprint 2 (Cloud API)
 - `whatsapp/client.py`: `send_text_message(channel, to, text)` → POST Graph API, retorna wa_message_id.
@@ -70,6 +70,17 @@ tags: [chatbot, whatsapp, django, react, contexto]
 - Gerar chave Fernet: `python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"`.
 - Teste de seguranca do banco (validado): (1) valor cru = cifra `gAAAAA...`, sem pedaco do token real; (2) nenhuma coluna text/varchar do schema `public` contem o token em texto puro; (3) chave errada → `InvalidToken` (ilegivel). A chave e a joia: nunca no git, secret manager em prod. Rotacao exige re-salvar todos os tokens (lib suporta lista de chaves: 1a cifra, resto so descriptografa).
 
+## Seguranca (auditoria + fixes 2026-07-15)
+- **Teste de invasao multi-tenant** (detalhes em [[seguranca-multi-tenant]]): 6 ataques PASS (sem token→401, cross-tenant list/spoof header/IDOR read/IDOR write/assign→nao vaza). Isolamento solido: `TenantMiddleware` so considera memberships do usuario AUTENTICADO. **BUG achado+corrigido**: `for_tenant(None)`→500 (filter com lazy None vira UUID invalido); FIX `common/models.py`: `if not tenant: return self.get_queryset().none()` (usar `not tenant`, NAO `is None` — `request.tenant` e SimpleLazyObject).
+- **Webhook HMAC** (vuln corrigida): `WhatsAppWebhookView.post` era AllowAny e processava sem validar origem → qualquer um com um `phone_number_id` valido injetava mensagem falsa no inbox (PoC confirmou). FIX: `_valid_signature` valida `X-Hub-Signature-256` (HMAC-SHA256 do `request.body` cru com App Secret, `hmac.compare_digest`, fail-closed). `settings.WHATSAPP_APP_SECRET` via env. Re-ataque: sem assinatura/errada→403, correta→200.
+- Pentest pendente: RBAC (papeis owner/admin/agent nao checados), brute-force login (sem throttling), robustez JWT.
+
+## Fase 2 — Chatbot (S1 e S2 feitos, pushados)
+- App `flows`. Models (migration `flows/0001`): `Flow(TenantModel)` = name/channel(FK)/definition(JSON `{nodes,edges}` do React Flow)/is_active; `UniqueConstraint` parcial `Q(is_active=True)` fields=['channel'] → 1 fluxo ativo por canal. `FlowSession(TenantModel)` = conversation(OneToOne)/flow/current_node_id/context(JSON)/status(running/waiting_input/handed_off/finished).
+- **S1 CRUD** (commit `1f64e61`): `FlowSerializer` (`validate_channel` bloqueia canal de outra org), `FlowView(ModelViewSet)` for_tenant + actions `activate`/`deactivate`, rota `/api/flows/`. Invasao testada PASS.
+- **S2 Motor** (commit `f343563`): `flows/engine.py`. Helpers puros do grafo, `_send_bot_text` (bot = `sender_membership=None`), `run_session` (loop trava `MAX_STEPS=50`), `trigger_inbound` (guards: humano/resolvida/sem-fluxo/sessao-existente). Fiado em `whatsapp/services._process_inbound` com import preguiçoso (evita ciclo services↔engine) dentro de try/except. Testado rollback+mocks: 5 cenarios PASS.
+- **S3 (proximo)**: nos `question` (pausa waiting_input, captura no context) e `condition` (ramifica). `trigger_inbound` vai precisar RETOMAR sessao em waiting_input (hoje sai cedo se sessao existe).
+
 ## Pendencias conhecidas
 - Trocar token temporario por permanente via System User.
 
@@ -85,4 +96,6 @@ tags: [chatbot, whatsapp, django, react, contexto]
 
 ## Links
 - [[guia-fase-1-inbox]]
+- [[plano-fase-2-chatbot]]
+- [[seguranca-multi-tenant]]
 - [[retrospectiva-sprint-4]]
