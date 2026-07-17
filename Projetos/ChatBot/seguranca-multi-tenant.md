@@ -66,8 +66,10 @@ Commit: `fix: for_tenant retorna queryset vazio quando tenant e None`.
 
 ## Próximos testes de segurança (pendentes, por prioridade)
 
-1. **Assinatura do webhook da Meta (`X-Hub-Signature-256`)** — o webhook é `AllowAny` sem validar assinatura; hoje dá para forjar mensagens de cliente. *Gap mais sério.*
-2. **RBAC** — papéis `owner/admin/agent` não são checados em nenhum endpoint (qualquer membro faz tudo).
-3. **Brute-force no login** — sem throttling em `/api/auth/login/`.
-4. **Robustez do JWT** — token expirado/adulterado/de usuário deletado.
-5. **Re-rodar a suíte de invasão contra `/api/flows/`** quando o CRUD estiver pronto.
+1. ~~**Assinatura do webhook da Meta (`X-Hub-Signature-256`)**~~ — ✅ **FEITO** (commit `fix: valida assinatura HMAC do webhook`). Valida HMAC-SHA256 do corpo cru com o App Secret, `hmac.compare_digest`, fail-closed. Re-ataque confirmou: sem assinatura → 403, assinatura errada → 403, correta → 200.
+2. ~~**Re-rodar a suíte de invasão contra `/api/flows/`**~~ — ✅ **FEITO** (6 vetores, todos bloqueados).
+3. **RBAC** — papéis `owner/admin/agent` não são checados em nenhum endpoint (qualquer membro faz tudo). *Próximo gap mais sério.*
+4. **Brute-force no login** — sem throttling em `/api/auth/login/`.
+5. **Robustez do JWT** — token expirado/adulterado/de usuário deletado.
+
+Ver o backlog completo de robustez em [[endurecimento-producao]].
