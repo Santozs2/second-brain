@@ -9,11 +9,12 @@ tags: [chatbot, whatsapp, django, react, react-flow, fluxo, planejamento]
 > [!info] O que é isso
 > Plano da **Fase 2 — construtor de chatbot** (editor visual de fluxo + motor de execução). O usuário optou por antecipar a construção (S1 e S2 já feitos, ver [[#Progresso]]). A **regra de ouro** original era validar a Fase 1 com 1–2 clientes reais antes disto — decisão consciente de seguir em paralelo.
 
-> [!success] Progresso (atualizado 2026-07-15)
+> [!success] Progresso (atualizado 2026-07-20)
 > - **S1 — Dados + CRUD** ✅ (commit `1f64e61`). Models `Flow`/`FlowSession` (migration `flows/0001`), `FlowSerializer` + `FlowView(ModelViewSet)` com `activate`/`deactivate`, rota `/api/flows/`. Isolamento multi-tenant testado (invasão PASS).
 > - **S2 — Motor básico** ✅ (commit `f343563`). `flows/engine.py`: helpers de leitura do grafo, `_send_bot_text` (mensagens do bot com `sender_membership=None`), `run_session` (loop com trava `MAX_STEPS=50`), `trigger_inbound` (guards: humano/resolvida/sem-fluxo/sessão-existente). Fiado no webhook (`whatsapp/services._process_inbound`) com import preguiçoso pra evitar ciclo. Testado com rollback + mocks: 5 cenários PASS.
-> - **S3 — Interação** 🔜 PRÓXIMO (nós `question`/`condition`, retomar `waiting_input`, contexto).
-> - **S4 — Handoff** e **S5 — Editor React Flow**: pendentes.
+> - **S3 — Interação** ✅ (commit `1ba7c64`). Nós `question` (pausa em `waiting_input`, guarda resposta no `context`) e `condition` (ramifica por `sourceHandle` com `eq`/`contains`); `resume_session` retoma a sessão pausada; esquema dos nós formalizado. Testado com rollback + mocks: **16/16 PASS**. Detalhes em [[fase2-s3-question-condition]].
+> - **S4 — Handoff** ✅ (commit `230f6aa`). Nó `handoff`: envia texto opcional, seta sessão `HANDED_OFF` (terminal) e conversa `PENDING` (volta pra fila do inbox). Bot fica calado depois de transferir (sessão `HANDED_OFF` ≠ `waiting_input` → `trigger_inbound` sai cedo). Testado com rollback + mocks: **12/12 PASS**. Detalhes em [[fase2-s4-handoff]].
+> - **S5 — Editor React Flow** 🔜 PRÓXIMO: paleta de nós, config por nó, salvar/publicar (usa o CRUD `/api/flows/` da S1).
 
 # Fase 2 — Construtor de Chatbot
 
