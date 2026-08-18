@@ -13,6 +13,7 @@ updated: 2026-07-05
 
 - [[Conecta SENAI|🎓 Conecta SENAI]] — plataforma educacional (em desenvolvimento)
 - [[ChatBot|💬 ChatBot]] — plataforma de atendimento WhatsApp SaaS (em desenvolvimento)
+- [[TCC|🎓 TCC]] — quiz de perfil + engine de recomendação de cursos (em desenvolvimento)
 - [[AMEA AI]] — assistente de IA pessoal (planejamento)
 
 ## Veja também
