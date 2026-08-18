@@ -91,7 +91,8 @@
       "Bash(sed -n '1,12p' \"Conceitos/Ciência da Computação/Algoritmos/cs-sorting-algorithms.md\")",
       "Bash(sed -n '1,12p' \"Estudos/Frameworks/React/fw-react-hooks.md\")",
       "Bash(sed -n '1,14p' \"Estudos/Linguagens/JavaScript/JavaScript.md\")",
-      "Bash(python -c \":*)"
+      "Bash(python -c \":*)",
+      "Bash(PYTHONIOENCODING=utf-8 python -c \":*)"
     ]
   }
 }
