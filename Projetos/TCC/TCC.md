@@ -30,6 +30,7 @@ updated: 2026-08-17
 - [[testes-e-validacao-tcc|✅ Testes e validação]] — 12 testes automatizados + smoke test
 - [[bugs-e-licoes-tcc|🐛 Bugs e lições aprendidas]] — o que quebrou e por quê
 - [[defesa-monografia-tcc|🎤 Defesa e monografia]] — argumentos para a banca e roadmap
+- [[decisao-camada-ia|🤖 Camada de IA (em decisão)]] — desenhos, orçamento e riscos para o grupo decidir
 
 ## 🎯 Estado atual
 
