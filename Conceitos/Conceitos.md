@@ -45,6 +45,8 @@ SORT file.name ASC
 
 ## 🔁 DevOps
 
+> 🏢 **[[Fluxo Empresarial de Git|Fluxo Empresarial de Git]]** — hub do conjunto de Git (branches, PR, review, release, hotfix)
+
 ```dataview
 LIST
 FROM "Conceitos/DevOps"

@@ -55,6 +55,7 @@ git push origin feature/login
 
 ## 🧩 Conceitos relacionados
 
+- [[Fluxo Empresarial de Git|🏢 Fluxo Empresarial de Git]] — como equipes usam Git no dia a dia (branches, PR, review, release)
 - [[Git Flow|Git Flow]]
 - [[CI-CD|CI/CD]]
 
