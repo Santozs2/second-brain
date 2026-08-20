@@ -133,9 +133,13 @@ PYTHONIOENCODING=utf-8 ./.venv/Scripts/python.exe manage.py test_engine
 
 Roda os 4 perfis simulados, imprime o ranking com scores e áreas, e faz `transaction.set_rollback(True)` no fim — **não suja o banco**. É o comando para rodar na apresentação; os testes automatizados são para garantir que nada quebrou.
 
+> [!warning] Os scores desta nota são de perfis com 4 respostas
+> A tabela acima vem do `test_engine.py`, que marca **4 alternativas**. Com as **6** que o formulário web exige, os números mudam e a ordem entre os dois primeiros do perfil elétrico **inverte** (Comandos 0,9877 × Eletricista 0,9875). Os dois cálculos estão corretos — são entradas diferentes. Para a monografia, use o perfil de 6 respostas: ver [[artigo-secao-calculo-cosseno|✍️ Artigo: seção do cálculo de cosseno]].
+
 ## Veja também
 
 - [[TCC|🎓 TCC]]
+- [[artigo-secao-calculo-cosseno|✍️ Artigo: seção do cálculo de cosseno]] — o mesmo cálculo escrito como texto científico
 - [[modelagem-dados-quiz|🗃️ Modelagem de dados]]
 - [[testes-e-validacao-tcc|✅ Testes e validação]]
 - [[defesa-monografia-tcc|🎤 Defesa e monografia]]

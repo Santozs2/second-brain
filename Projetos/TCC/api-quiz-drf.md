@@ -16,11 +16,11 @@ criado: 2026-08-17
 
 ## 🛣️ Endpoints
 
-| Método | Rota | View | O quê |
-|---|---|---|---|
-| `GET` | `/api/quiz/questions/` | `QuestionListView` | Perguntas ativas com alternativas aninhadas |
-| `POST` | `/api/quiz/submit/` | `SubmitQuizView` | Envia respostas → cria tentativa → devolve ranking (201) |
-| `GET` | `/api/quiz/attempts/<pk>/` | `AttemptResultView` | Recupera o resultado de uma tentativa |
+| Método | Rota                       | View                | O quê                                                    |
+| ------ | -------------------------- | ------------------- | -------------------------------------------------------- |
+| `GET`  | `/api/quiz/questions/`     | `QuestionListView`  | Perguntas ativas com alternativas aninhadas              |
+| `POST` | `/api/quiz/submit/`        | `SubmitQuizView`    | Envia respostas → cria tentativa → devolve ranking (201) |
+| `GET`  | `/api/quiz/attempts/<pk>/` | `AttemptResultView` | Recupera o resultado de uma tentativa                    |
 
 Registradas em `quiz/urls.py`, incluídas com `path("api/quiz/", include("quiz.urls"))`.
 
