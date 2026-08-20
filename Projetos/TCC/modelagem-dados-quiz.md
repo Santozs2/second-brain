@@ -85,6 +85,10 @@ O vetor da alternativa: escolher aquela opção soma `weight` naquela área. `un
 
 O `Recommendation.explanation` é um `JSONField` com as áreas que mais contribuíram — ver [[engine-matching-cosseno|🧮 Engine]].
 
+> [!todo] Extensão prevista para a camada de IA (Passo 7)
+> Com o [[decisao-camada-ia|Desenho B modificado]] aprovado, `Recommendation` ganha `rank_engine` (o `rank` atual), `rank_final` (a ordem entregue pela LLM), `llm_text` e `is_primary`; e `QuizAttempt` ganha os metadados da chamada (`llm_model`, `prompt_version`, `latency_ms`, tokens, `used_fallback`, `diverged`, `cache_hit`).
+> **Guardar as duas ordens é o ponto:** é a diferença entre `rank_engine` e `rank_final` que vira a métrica de divergência do capítulo comparativo. Detalhes e justificativa em [[camada-ia-plano-implementacao|🧩 Plano da camada de IA]].
+
 ## 🧠 Decisões defensáveis
 
 ### 1. Pesos em tabela relacional, não em `JSONField`
