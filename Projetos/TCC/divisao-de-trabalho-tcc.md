@@ -16,13 +16,17 @@ criado: 2026-08-20
 
 | Frente | Dono | Uma frase |
 |---|---|---|
-| 1️⃣ 🧮 **Motor e calibração** | **você** | Do perfil ao ranking numérico |
-| 2️⃣ 🤖 **Camada de IA e experimento** | *a definir* | Do ranking ao texto entregue |
+| 1️⃣ 🧮 **Motor e calibração** | **você** (scrum master) | Do perfil ao ranking numérico |
+| 2️⃣ 🤖 **Camada de IA e experimento** | **você** (scrum master) | Do ranking ao texto entregue |
 | 3️⃣ 📚 **Catálogo, trilha e integração** | *a definir* | A matéria-prima que o motor consome |
 | 4️⃣ 🎨 **Jornada, avaliação e indicadores** | *a definir* | O que o usuário vê e o que a instituição mede |
 
-> [!todo] Preencher os três nomes
+> [!todo] Preencher os dois nomes que faltam
 > A divisão abaixo funciona com qualquer arranjo, mas **cada frente precisa de um dono único**. Frente com dois donos vira frente sem dono.
+
+> [!success] Atualização de 2026-08-23 — F1 e F2 passam a ter o mesmo dono
+> O scrum master assume **as duas primeiras frentes** e acompanha as outras duas. É a única fusão que quase não custa coordenação: F1 e F2 vivem do mesmo contrato (`build_payload`), então a fronteira entre elas vira código em vez de reunião. O detalhamento — contratos congelados, backlog tarefa a tarefa, migração de dados e cronograma de 5 semanas — está em [[spec-motor-e-ia-frentes-1-2|🧭 Spec das Frentes 1 e 2]].
+> **O que isso não resolve:** a F3 continua sem dono e continua sendo o caminho crítico do TCC inteiro.
 
 ---
 
@@ -171,7 +175,7 @@ Mudar o ranking do motor por código (só via prompt, e dentro do limiar), escre
 
 ## ❓ A decidir na próxima reunião
 
-1. **Nomes das frentes 2, 3 e 4** e quem é o consolidador
+1. **Nomes das frentes 3 e 4** e quem é o consolidador — e **quem revisa os PRs do dono de F1+F2**
 2. **Top-5 ou top-3 para a LLM** — o quadro e a decisão registrada divergem ([[escopo-fluxo-educmatch|🗺️ ponto 2]])
 3. **Quantos cursos entram de verdade** — o quadro diz 18; confirmar e congelar
 4. **Quem guarda a credencial** da API (pendência aberta em [[decisao-camada-ia|🤖 Decisão]])
@@ -179,6 +183,7 @@ Mudar o ranking do motor por código (só via prompt, e dentro do limiar), escre
 
 ## 📎 Veja também
 
+- [[spec-motor-e-ia-frentes-1-2|🧭 Spec de atualização das Frentes 1 e 2]] — backlog, contratos e cronograma
 - [[escopo-fluxo-educmatch|🗺️ Fluxo EducMatch e recorte de escopo]]
 - [[camada-ia-plano-implementacao|🧩 Plano da camada de IA]] · [[prompt-padrao-recomendacao|📝 Prompt padrão]]
 - [[engine-matching-cosseno|🧮 Engine]] · [[catalogo-areas-e-cursos|📚 Catálogo]] · [[front-templates-django|🎨 Front]]
