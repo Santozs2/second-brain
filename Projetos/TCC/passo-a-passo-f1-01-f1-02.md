@@ -80,8 +80,11 @@ Depois de `respondent_name`, antes do `class Meta`:
     confidence_gap = models.FloatField(
         null=True, blank=True, help_text="Diferenca de score entre o 1o e o 2o colocado."
     )
-    confidence_level = models.CharField(
-        max_length=20, blank=True, help_text="alta | empate_tecnico | perfil_fraco"
+    confidence_band = models.CharField(
+        max_length=20, blank=True, help_text="alta | media | baixa (calibra o tom do texto)"
+    )
+    tie_set = models.JSONField(
+        default=list, blank=True, help_text="course_id dos candidatos dentro de epsilon do topo."
     )
 
     # Metadados da chamada a LLM: sao da tentativa, nao de cada curso.
@@ -95,8 +98,8 @@ Depois de `respondent_name`, antes do `class Meta`:
     cache_hit = models.BooleanField(default=False)
 ```
 
-> [!note] `confidence_gap` e `confidence_level` entram agora e ficam vazios
-> Quem preenche é a F1-04. Entram aqui só para não fazer duas migrations no mesmo modelo com uma semana de diferença.
+> [!note] `confidence_gap`, `confidence_band` e `tie_set` entram agora e ficam vazios
+> Quem preenche é a F1-04 (conjunto de empate e banda). Entram aqui só para não fazer duas migrations no mesmo modelo com dois dias de diferença — e agora F1-04 vem **antes** de F1-03, porque o contrato C1 carrega esses campos.
 
 ### `quiz/models.py` — `Recommendation`
 
@@ -186,14 +189,23 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name="quizattempt",
-            name="confidence_level",
+            name="confidence_band",
             field=models.CharField(
                 blank=True,
                 default="",
                 max_length=20,
-                help_text="alta | empate_tecnico | perfil_fraco",
+                help_text="alta | media | baixa (calibra o tom do texto)",
             ),
             preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name="quizattempt",
+            name="tie_set",
+            field=models.JSONField(
+                blank=True,
+                default=list,
+                help_text="course_id dos candidatos dentro de epsilon do topo.",
+            ),
         ),
         migrations.AddField(
             model_name="quizattempt",

@@ -65,9 +65,36 @@ criado: 2026-08-24
 > [!important] Contrato antes de código — vale para você também
 > Nenhuma tarefa de implementação abaixo começa antes destes três blocos estarem fechados e anunciados ao grupo. É a mesma regra que a [[divisao-de-trabalho-tcc|divisão]] impõe às outras frentes.
 
+### 🎭 O papel da IA — desempate e calibração
+
+> [!important] Decidido em conversa de 2026-08-24, **falta ratificar no grupo**
+> A regra antiga ("a LLM pode reordenar se o gap for menor que 0,05") **não sobrevive à escala** e já está furada hoje: em 3 dos 4 perfis de aceite documentados em [[engine-matching-cosseno|🧮 Engine]], o gap entre 1º e 2º já é menor que 0,05. A exceção virou o caso comum, com 12 cursos. Com 180, vira 100% dos casos.
+
+No lugar dela, **dois eixos independentes**:
+
+| Eixo | Quem decide | Regra |
+|---|---|---|
+| **Qual curso é o principal** | engine **ou** LLM | A engine publica o **conjunto de empate**: os candidatos dentro de ε do topo. Conjunto de 1 → a engine decidiu, a LLM só apresenta. Conjunto ≥ 2 → a LLM escolhe entre os empatados |
+| **Com quanta certeza o texto fala** | sempre a LLM | A **banda** do score do principal define o tom: alta, média ou baixa |
+
+Nos dados reais do projeto:
+
+| Perfil | Top-1 × Top-2 | Gap | Conjunto | Quem escolhe |
+|---|---|---|---|---|
+| Automotivo + elétrico | 0,968 × 0,891 | 0,077 | 1 | **engine** |
+| Costura | 0,999 × 0,969 | 0,030 | ≥ 2 | LLM |
+| TI e dados | 1,000 × 0,979 | 0,021 | ≥ 2 | LLM |
+| Elétrico (6 respostas) | 0,9877 × 0,9875 | 0,0002 | ≥ 2 | LLM |
+
+> [!success] Por que o automotivo tem que ficar fora
+> `Injeção Eletrônica > Motores a Combustão` é o resultado do `test_perfil_misto_prefere_o_curso_hibrido` — o único critério de aceite em que a ordem correta **emergiu do cálculo**, sem nenhum `if`. Se a LLM puder virar esse caso, ela pode desfazer a evidência sobre a qual o capítulo de metodologia está construído. Gap de 0,077 é diferença real: o sistema dizer "aqui não se mexe" é ele funcionando.
+
+> [!important] A regra de arquitetura que decorre disso
+> **Se alguma coisa deveria mudar a ordem, é porque a engine não sabia de algo.** Pré-requisito que a pessoa não tem, curso que não abre turma na unidade dela, módulo que ela já fez — nada disso é reordenação, é **filtragem**, e o lugar dela é *antes* da engine. Toda vez que alguém propuser "e se a IA pudesse considerar X", a resposta certa é transformar X em entrada do cálculo. Duas fontes de ordenação discordando é um sistema que ninguém consegue auditar.
+
 ### 📄 C1 — `build_payload(attempt)` · F1 publica, F2 consome
 
-Base em [[camada-ia-plano-implementacao|🧩 plano]], **com uma adição**: o bloco `confianca`, que não existia lá e nasce da tarefa F1-04.
+Base em [[camada-ia-plano-implementacao|🧩 plano]], **com duas adições**: o bloco `confianca` (que nasce da tarefa F1-04) e o bloco `respostas`.
 
 ```json
 {
@@ -77,10 +104,16 @@ Base em [[camada-ia-plano-implementacao|🧩 plano]], **com uma adição**: o bl
     ],
     "respostas_dadas": 6
   },
+  "respostas": [
+    {"pergunta": "Onde você prefere trabalhar?", "escolha": "Chão de fábrica"},
+    {"pergunta": "O que mais te interessa?", "escolha": "Eletricidade e comandos"}
+  ],
   "confianca": {
+    "score_top1": 0.9877,
     "gap_top1_top2": 0.0002,
-    "nivel": "empate_tecnico",
-    "score_top1": 0.9877
+    "banda": "alta",
+    "conjunto_empate": [11, 7],
+    "quem_escolhe": "llm"
   },
   "candidatos": [
     {
@@ -95,11 +128,40 @@ Base em [[camada-ia-plano-implementacao|🧩 plano]], **com uma adição**: o bl
 }
 ```
 
-`nivel` ∈ `alta` · `empate_tecnico` · `perfil_fraco`. Regras em F1-04.
+| Campo | Valores | Para quê |
+|---|---|---|
+| `banda` | `alta` · `media` · `baixa` | Calibra o tom do texto (eixo C) |
+| `conjunto_empate` | lista de `course_id` dentro de ε do topo | Delimita entre quem a LLM pode escolher (eixo D) |
+| `quem_escolhe` | `engine` · `llm` | Derivado: `engine` quando o conjunto tem 1 elemento |
+
+> [!warning] Sem o bloco `respostas`, o eixo D não fecha
+> Se a engine empatou dois cursos usando os números do perfil, e a LLM recebe **os mesmos números**, ela não tem com o que desempatar — estaria chutando sobre exatamente o dado que já empatou. O desempate só existe se a LLM tiver algo que o vetor perdeu: *"prefiro oficina"* e *"prefiro chão de fábrica"* podem virar o mesmo peso de mecânica no vetor, mas dizem coisas diferentes sobre a pessoa.
+
+> [!note] Isso não abre superfície de injeção de prompt
+> As alternativas são **fechadas e escritas pelo grupo** — o estudante não digita texto livre. O alerta de [[prompt-padrao-recomendacao|📝 prompt v1]] continua valendo só para o dia em que entrar um campo aberto no quiz.
+
+> [!todo] Pendente da decisão sobre escala
+> Com 180 cursos, cinco candidatos do mesmo eixo têm descrição quase idêntica e a LLM desempata no vazio. Nesse cenário os `candidatos` precisam carregar os atributos que **de fato** separam cursos irmãos: nível (iniciação / qualificação / técnico), carga horária, pré-requisito e eixo tecnológico. **Só entra no contrato depois de o grupo decidir se a camada de IA nasce para 18 ou já para 180.**
 
 ### 📄 C2 — saída da LLM · F2 valida
 
-Idêntico ao de [[camada-ia-plano-implementacao|🧩 plano]] (`principal` + 4 `alternativas`). **Sem alteração** — está fechado e o prompt v1 já foi escrito contra ele.
+O **formato** é idêntico ao de [[camada-ia-plano-implementacao|🧩 plano]] (`principal` + 4 `alternativas`) e não muda.
+
+O que muda é a **validação**: o eixo D acrescenta uma quinta regra às quatro que já existiam.
+
+| # | Regra | Se violar |
+|---|---|---|
+| 1 | Todo `course_id` veio em `candidatos` | ❌ fallback |
+| 2 | Exatamente 5 ids, sem repetição | ❌ fallback |
+| 3 | Nenhum candidato sumiu | ❌ fallback |
+| 4 | `texto` não vazio e dentro do limite | ❌ fallback |
+| **5** | **O `principal` está dentro do `conjunto_empate`** | ❌ fallback |
+
+> [!success] A regra 5 é o que torna o limite verificável em vez de confiável
+> Antes, "não reordene fora do limiar" era só uma instrução em linguagem natural no prompt — o servidor não tinha como checar se foi obedecida. Com o conjunto de empate calculado pela engine e enviado no payload, **o servidor sabe exatamente quem podia ser promovido**. Quando o conjunto tem 1 elemento, a regra 5 sozinha garante que a ordem da engine foi respeitada. É cinto e suspensório, igual à regra 1 contra alucinação de curso.
+
+> [!warning] A regra 2 do prompt v1 precisa ser reescrita antes de F2-04
+> O texto atual em [[prompt-padrao-recomendacao|📝 Prompt v1]] fala em "diferença de `score` menor que 0,05". Com o eixo D isso sai e entra "escolha o principal **entre os ids listados em `conjunto_empate`**; se a lista tiver um id só, ele é o principal". É mais simples de o modelo obedecer e é verificável no servidor. Como o prompt ainda não foi copiado para arquivo, a correção é barata **agora** e cara depois de v1 estar congelada.
 
 ### 📄 C3 — entrega ao front · F2 publica, F4 consome
 
@@ -138,7 +200,10 @@ GET /api/quiz/attempts/<pk>/entrega/
 
 **Campos novos em `Recommendation`:** `rank` → `rank_engine`; e nascem `rank_final`, `llm_text` (`TextField(blank=True)`), `is_primary` (`BooleanField(default=False)`).
 
-**Campos novos em `QuizAttempt`:** `llm_model`, `prompt_version`, `latency_ms`, `tokens_in`, `tokens_out`, `used_fallback`, `diverged`, `cache_hit` — mais `confidence_gap` e `confidence_level`, que são do motor e não da IA.
+**Campos novos em `QuizAttempt`:** `llm_model`, `prompt_version`, `latency_ms`, `tokens_in`, `tokens_out`, `used_fallback`, `diverged`, `cache_hit` — mais `confidence_gap`, `confidence_band` e `tie_set`, que são do motor e não da IA.
+
+> [!note] `tie_set` é `JSONField(default=list)` e precisa ficar gravado
+> Guardar o conjunto de empate na tentativa é o que permite, três meses depois, auditar uma divergência: *"a LLM promoveu o curso 11 — ele estava no conjunto de empate daquela tentativa?"*. Sem isso o experimento do Passo 11 mede divergência sem conseguir dizer se ela era **permitida**.
 
 Sequência da migração (o banco de desenvolvimento tem tentativas reais — não dá para `default=0` e seguir):
 
@@ -163,8 +228,8 @@ Sequência da migração (o banco de desenvolvimento tem tentativas reais — n�
 |---|---|---|---|---|
 | **F1-01** | `RECOMMENDATION_LIMIT` no settings; `recommend(attempt, limit=None)` lê de lá | `config/settings.py`, `quiz/engine.py` | decisão top-5/top-3 | Nenhum `5` literal fora do settings; teste cobre `limit` alternativo |
 | **F1-02** | Migração dos campos novos (seção 3) | `quiz/models.py`, migration, `serializers.py`, `web_views.py`, `admin.py` | anúncio à F4 | `manage.py test` verde; tentativa antiga abre no site sem erro |
-| **F1-03** | `build_payload(attempt)` → C1 | `quiz/delivery.py` | F1-02 | Teste compara o dict com o JSON de C1, campo a campo |
-| **F1-04** | Indicador de confiança | `quiz/engine.py`, `quiz/models.py` | F1-02 | 3 testes: alta, empate técnico, perfil fraco |
+| **F1-04** | Conjunto de empate (eixo D) + banda (eixo C) | `quiz/engine.py`, `quiz/models.py` | F1-02 | Testes: conjunto de 1 no perfil automotivo, conjunto ≥ 2 no elétrico, banda nas 3 faixas |
+| **F1-03** | `build_payload(attempt)` → C1 | `quiz/delivery.py` | F1-02, **F1-04** | Teste compara o dict com o JSON de C1, campo a campo, com `confianca` e `respostas` |
 | **F1-05** | Análise de sensibilidade | `quiz/management/commands/sensibilidade.py` | catálogo (qualquer) | CSV com Δposição por Δpeso; tabela pronta para o artigo |
 | **F1-06** | Recalibração com os 18 cursos reais | seeds (F3) + revisão dos 4 critérios de aceite | **F3** | Os 4 perfis de aceite passam com o catálogo real |
 | **F1-07** | Bateria nova de testes | `quiz/tests.py` | F1-01 a F1-04 | Contagem sobe de 12 para ~22 |
@@ -172,20 +237,41 @@ Sequência da migração (o banco de desenvolvimento tem tentativas reais — n�
 
 ### 🎚️ F1-04 em detalhe — o indicador de confiança
 
-Uma constante, um lugar só:
+São **duas funções puras**, uma para cada eixo. Nenhuma delas toca o banco.
 
 ```python
-LIMIAR_EMPATE = 0.05   # quiz/engine.py — MESMO número da regra 2 do prompt v1
+EPSILON_EMPATE = 0.05   # quiz/engine.py — margem do conjunto de empate
+
+def conjunto_empate(ranking, epsilon=EPSILON_EMPATE):
+    """Candidatos a menos de epsilon do topo. Sempre inclui o 1o colocado."""
+
+def banda(score_top1):
+    """alta | media | baixa — calibra a confianca do texto, nao a ordem."""
 ```
 
-| Situação | Nível | Consequência |
-|---|---|---|
-| `score_top1 - score_top2 < LIMIAR_EMPATE` | `empate_tecnico` | A LLM **pode** reordenar (regra 2 do prompt) |
-| `score_top1 < 0.30` | `perfil_fraco` | O texto não pode fingir certeza — é o caso de teste que a nota do prompt aponta como "o mais fácil de esquecer" |
-| resto | `alta` | A ordem do motor é para ser respeitada |
+**Eixo D — conjunto de empate**
 
-> [!important] O limiar 0,05 vai existir em dois lugares — e um deles é um arquivo `.md`
-> A regra 2 do [[prompt-padrao-recomendacao|📝 prompt v1]] tem o número escrito no texto do prompt; o motor vai ter o mesmo número em Python. **A duplicação é real e é aceitável** — o modelo precisa do número em linguagem natural. O que não é aceitável é mudar um e esquecer o outro: se o valor mudar, o prompt vira `entrega_v2.md` e a constante muda no mesmo commit. Deixe um comentário no código apontando para o arquivo do prompt.
+| Tamanho do conjunto | `quem_escolhe` | Efeito |
+|---|---|---|
+| 1 | `engine` | A ordem do motor vale. A regra 5 do C2 rejeita qualquer outra escolha |
+| ≥ 2 | `llm` | A LLM escolhe entre os empatados, usando o bloco `respostas` |
+
+**Eixo C — banda de confiança**
+
+| Faixa | `banda` | Como o texto fala |
+|---|---|---|
+| score alto | `alta` | "esse curso combina muito com o seu perfil" |
+| score médio | `media` | "esse é o que mais se aproxima do que você descreveu" |
+| score baixo | `baixa` | "esse é o caminho mais próximo — vale conversar com um orientador" |
+
+> [!important] Os dois eixos são independentes — e é isso que faz a combinação funcionar
+> Um perfil pode ter conjunto de empate = 1 **e** banda baixa: a engine escolheu, e a LLM fala com cautela. Ou conjunto = 4 **e** banda alta: a LLM escolhe entre quatro ótimos candidatos e fala com segurança. Tratar os dois como a mesma coisa é o erro que a regra do limiar de 0,05 cometia.
+
+> [!question] Os cortes das bandas ainda não têm número, e não deviam ter por chute
+> Diferente do ε, que tem significado matemático (margem de empate), os cortes de banda são uma **escolha de produto**: a partir de qual score o sistema tem o direito de soar confiante ao recomendar uma formação profissional a alguém. Defina-os **depois** de rodar a distribuição de scores do catálogo real (é saída da F1-05) — e registre o critério, porque isso vai para o capítulo de ética. Chutar 0,30 e 0,70 agora é criar mais um número que ninguém sabe defender.
+
+> [!success] Em compensação, o ε deixa de estar escrito no prompt
+> O limiar de 0,05 vivia em dois lugares — Python e o texto do prompt em `.md` — e mudar um sem o outro era o risco declarado. Com o eixo D, **só o Python conhece o número**: o prompt recebe a lista de ids já calculada. A duplicação some, e a obediência da LLM vira verificável no servidor em vez de confiável.
 
 > [!question] O que a banca pergunta em F1-05
 > *"E se vocês tivessem dado peso 4 em vez de 5 nesse curso?"* — a análise de sensibilidade é a resposta pronta. Sem ela, a resposta honesta é "não sei", e aí a atribuição de pesos (que já é a limitação mais visível do trabalho) vira a limitação **não medida**. Rode-a mesmo com o catálogo fictício na semana 2: o método fica validado e é só reexecutar quando os 18 cursos chegarem.
@@ -201,9 +287,9 @@ Decomposição dos Passos 7 a 11 do [[camada-ia-plano-implementacao|🧩 plano]]
 | **F2-01** | `quiz/llm/base.py` — `LLMProvider` (Protocol, só `complete`) + `LLMTimeout`, `LLMUnavailable` | 7 | ❌ | Import limpo sem nenhum SDK instalado |
 | **F2-02** | `quiz/llm/fake.py` — `FakeProvider` monta JSON válido a partir dos ids recebidos | 7 | ❌ | Devolve C2 válido para qualquer payload |
 | **F2-03** | `get_provider()` + variáveis `LLM_*` no settings, com `python-dotenv` e `.env.example` | 7 | ❌ | `LLM_ENABLED=false` não instancia provider nenhum |
-| **F2-04** | `quiz/prompts/entrega_v1.md` — copiar **literal** de [[prompt-padrao-recomendacao\|📝 prompt v1]] | 8 | ❌ | O arquivo e a nota têm o mesmo texto, caractere a caractere |
+| **F2-04** | `quiz/prompts/entrega_v1.md` — copiar de [[prompt-padrao-recomendacao\|📝 prompt v1]] **com a regra 2 reescrita** para o eixo D | 8 | ❌ | O arquivo e a nota batem, e a regra 2 fala em `conjunto_empate`, não em 0,05 |
 | **F2-05** | Carregador do prompt: lê o arquivo e injeta `{{PERFIL_JSON}}` e `{{CANDIDATOS_JSON}}` | 8 | ❌ | Zero f-string de prompt em view ou serializer |
-| **F2-06** | `DeliverySerializer` — as 4 regras de validação | 8 | ❌ | 6 testes de saída maliciosa, todos terminando em fallback e **nenhum** em 500 |
+| **F2-06** | `DeliverySerializer` — as 5 regras de validação do C2 | 8 | ❌ | 7 testes de saída maliciosa (as 6 antigas + principal fora do `conjunto_empate`), todos em fallback e **nenhum** em 500 |
 | **F2-07** | `delivery.deliver(attempt)` — orquestra, valida, grava, calcula `diverged`, decide fallback | 8 | ❌ | Com `FakeProvider`, a tentativa grava `rank_final`, `llm_text` e `is_primary` |
 | **F2-08** | `quiz/llm/gemini.py` + cache + timeout de 8s + metadados | 9 | ✅ | 2ª execução do mesmo perfil sai do cache com `cache_hit=True` |
 | **F2-09** | Endpoint de entrega — contrato **C3** | 9/10 | ❌ | A F4 monta a tela sem precisar te perguntar nada |
@@ -248,7 +334,9 @@ Decomposição dos Passos 7 a 11 do [[camada-ia-plano-implementacao|🧩 plano]]
 |---|---|---|
 | `limit` configurável respeitado | F1 | `TestCase` |
 | `build_payload` bate o contrato C1 | F1 | `TestCase` |
-| Confiança: alta / empate técnico / perfil fraco | F1 | `SimpleTestCase` (função pura) |
+| Conjunto de empate: tamanho 1 no automotivo, ≥ 2 no elétrico | F1 | `SimpleTestCase` (função pura) |
+| Banda de confiança nas três faixas | F1 | `SimpleTestCase` (função pura) |
+| `principal` fora do `conjunto_empate` cai em fallback | F2 | `TestCase` |
 | `rank_final` igual a `rank_engine` quando não há IA | F1 | `TestCase` |
 | `FakeProvider` devolve C2 válido | F2 | `SimpleTestCase` |
 | Saída maliciosa: id fantasma, id repetido, só 3 cursos, JSON quebrado, texto vazio, texto gigante | F2 | `TestCase` × 6 |
@@ -265,8 +353,8 @@ Decomposição dos Passos 7 a 11 do [[camada-ia-plano-implementacao|🧩 plano]]
 
 | Semana | Período | F1 (motor) | F2 (IA) | Entregável fechado |
 |---|---|---|---|---|
-| **1** | 24/08 – 30/08 | F1-01, F1-02, F1-03 | F2-01, F2-02, F2-03 | **Contratos C1/C2/C3 anunciados** + camada offline de pé |
-| **2** | 31/08 – 06/09 | F1-04, F1-05 | F2-04, F2-05, F2-06 | Prompt em arquivo + validador que não deixa lixo entrar |
+| **1** | 24/08 – 30/08 | F1-01, F1-02, **F1-04**, F1-03 | F2-01, F2-02, F2-03 | **Contratos C1/C2/C3 anunciados** + camada offline de pé |
+| **2** | 31/08 – 06/09 | F1-05 | F2-04, F2-05, F2-06 | Prompt em arquivo + validador que não deixa lixo entrar |
 | **3** | 07/09 – 13/09 | F1-06 (depende da F3) | F2-07, F2-08 | Primeira chamada real ao Gemini, com fallback provado |
 | **4** | 14/09 – 20/09 | F1-07 | F2-09, F2-10 | Experimento rodado, CSV na mão |
 | **5** | 21/09 – 27/09 | F1-08 | F2-11 | Dois capítulos escritos |
@@ -286,7 +374,10 @@ Decomposição dos Passos 7 a 11 do [[camada-ia-plano-implementacao|🧩 plano]]
 
 ## 9️⃣ Decisões que precisam sair do kickoff
 
-> [!todo] Sem estas cinco, a semana 1 não começa limpa
+> [!todo] Sem estas sete, a semana 1 não começa limpa
+> 0. **Ratificar o papel da IA (eixos D + C)** — substitui o limiar de 0,05, que já está furado em 3 dos 4 perfis de aceite. Muda C1, C2 e a regra 2 do prompt. **É mudança de contrato, então é decisão de grupo, não sua.**
+> 0b. **A camada de IA nasce para 18 cursos ou já para 180?** Se for 180, os `candidatos` precisam dos atributos discriminantes (nível, carga horária, pré-requisito, eixo) já no C1 — cinco cursos do mesmo eixo têm descrição quase idêntica, e sem isso a LLM desempata no vazio.
+> 0c. **O que o quadro quis dizer com `180 cursos → IA → 18 cursos`** — se 18 é o recorte do catálogo, o alerta de escopo está certo; se é a lista personalizada de cada pessoa, o alerta está calibrado errado e a nota [[escopo-fluxo-educmatch\|🗺️ escopo]] precisa ser reescrita. **De qualquer forma, quem reduz 180 → N é a engine, nunca a LLM** — se ela vir os 180, volta a poder alucinar curso e o sistema para sem internet.
 > 1. **Top-5 ou top-3** — trava F1-01 e o texto do prompt. *Recomendação: manter top-5; o formato 1+4 já está desenhado e mandar 5 candidatos custa quase o mesmo que 3.*
 > 2. **Donos das frentes 3 e 4** — F3 atrasada empurra F1-06 e esvazia a sua semana 3.
 > 3. **Quem guarda a credencial** da API — aberta desde [[decisao-camada-ia|🤖 Decisão]]. Só trava F2-08, mas defina agora mesmo assim.
