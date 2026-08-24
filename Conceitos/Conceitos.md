@@ -5,7 +5,7 @@ status: ativo
 tags:
   - moc
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-08-24
 ---
 # 🧠 Conceitos
 
@@ -17,6 +17,44 @@ updated: 2026-07-05
 LIST
 FROM "Conceitos/Ciência da Computação"
 SORT file.path ASC
+```
+
+## 🎯 Recomendação
+
+> 📐 **[[rec-modelo-espaco-vetorial|Modelo de Espaço Vetorial]]** e **[[rec-similaridade-cosseno|Similaridade de cosseno]]** — o núcleo matemático do conjunto
+
+```dataview
+LIST
+FROM "Conceitos/Recomendação"
+SORT file.name ASC
+```
+
+## 🤖 Inteligência Artificial
+
+> 🎭 **[[ia-alucinacao-e-grounding|Alucinação e grounding]]** — a nota que define como usar LLM sem depender dela
+
+```dataview
+LIST
+FROM "Conceitos/Inteligência Artificial"
+SORT file.name ASC
+```
+
+## 🎓 Metodologia Científica
+
+> 📄 **[[met-estrutura-monografia|Estrutura da monografia]]** — hub do conjunto acadêmico
+
+```dataview
+LIST
+FROM "Conceitos/Metodologia Científica"
+SORT file.name ASC
+```
+
+## 🧪 Testes
+
+```dataview
+LIST
+FROM "Conceitos/Testes"
+SORT file.name ASC
 ```
 
 ## 🔌 API

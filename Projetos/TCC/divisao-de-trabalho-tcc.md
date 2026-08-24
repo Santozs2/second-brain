@@ -14,17 +14,17 @@ criado: 2026-08-20
 > [!abstract] Como esta divisão foi feita
 > Não por arquivo nem por "quem gosta de front", mas por **fronteira de contrato**. Cada frente publica um formato de dados fixo e consome o da anterior. Enquanto o contrato não muda, as quatro pessoas trabalham em paralelo sem se esbarrar — e ninguém fica esperando ninguém para começar.
 
-| Frente | Dono | Uma frase |
-|---|---|---|
-| 1️⃣ 🧮 **Motor e calibração** | **você** (scrum master) | Do perfil ao ranking numérico |
-| 2️⃣ 🤖 **Camada de IA e experimento** | **você** (scrum master) | Do ranking ao texto entregue |
-| 3️⃣ 📚 **Catálogo, trilha e integração** | *a definir* | A matéria-prima que o motor consome |
-| 4️⃣ 🎨 **Jornada, avaliação e indicadores** | *a definir* | O que o usuário vê e o que a instituição mede |
+| Frente                                      | Dono                    | Uma frase                                     |
+| ------------------------------------------- | ----------------------- | --------------------------------------------- |
+| 1️⃣ 🧮 **Motor e calibração**               | **você** (scrum master) | Do perfil ao ranking numérico                 |
+| 2️⃣ 🤖 **Camada de IA e experimento**       | **você** (scrum master) | Do ranking ao texto entregue                  |
+| 3️⃣ 📚 **Catálogo, trilha e integração**    | *a definir*             | A matéria-prima que o motor consome           |
+| 4️⃣ 🎨 **Jornada, avaliação e indicadores** | *a definir*             | O que o usuário vê e o que a instituição mede |
 
 > [!todo] Preencher os dois nomes que faltam
 > A divisão abaixo funciona com qualquer arranjo, mas **cada frente precisa de um dono único**. Frente com dois donos vira frente sem dono.
 
-> [!success] Atualização de 2026-08-23 — F1 e F2 passam a ter o mesmo dono
+> [!success] Atualização de 2026-08-24 — F1 e F2 passam a ter o mesmo dono
 > O scrum master assume **as duas primeiras frentes** e acompanha as outras duas. É a única fusão que quase não custa coordenação: F1 e F2 vivem do mesmo contrato (`build_payload`), então a fronteira entre elas vira código em vez de reunião. O detalhamento — contratos congelados, backlog tarefa a tarefa, migração de dados e cronograma de 5 semanas — está em [[spec-motor-e-ia-frentes-1-2|🧭 Spec das Frentes 1 e 2]].
 > **O que isso não resolve:** a F3 continua sem dono e continua sendo o caminho crítico do TCC inteiro.
 
@@ -184,6 +184,7 @@ Mudar o ranking do motor por código (só via prompt, e dentro do limiar), escre
 ## 📎 Veja também
 
 - [[spec-motor-e-ia-frentes-1-2|🧭 Spec de atualização das Frentes 1 e 2]] — backlog, contratos e cronograma
+- [[passo-a-passo-f1-01-f1-02|🔧 Passo a passo de F1-01 e F1-02]] — o código das duas primeiras tarefas
 - [[escopo-fluxo-educmatch|🗺️ Fluxo EducMatch e recorte de escopo]]
 - [[camada-ia-plano-implementacao|🧩 Plano da camada de IA]] · [[prompt-padrao-recomendacao|📝 Prompt padrão]]
 - [[engine-matching-cosseno|🧮 Engine]] · [[catalogo-areas-e-cursos|📚 Catálogo]] · [[front-templates-django|🎨 Front]]

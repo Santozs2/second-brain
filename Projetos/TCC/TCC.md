@@ -28,6 +28,7 @@ updated: 2026-08-20
 - [[escopo-fluxo-educmatch|🗺️ Fluxo EducMatch e recorte de escopo]] — o quadro do grupo, o que entra e o que fica de fora
 - [[divisao-de-trabalho-tcc|👥 Divisão de trabalho (4 frentes)]] — quem faz o quê e as fronteiras entre as partes
 - [[spec-motor-e-ia-frentes-1-2|🧭 Spec das Frentes 1 e 2]] — backlog, contratos e cronograma do motor e da camada de IA
+- [[passo-a-passo-f1-01-f1-02|🔧 Passo a passo de F1-01 e F1-02]] — o código das duas primeiras tarefas, arquivo por arquivo
 
 ### 🛠️ Técnico
 

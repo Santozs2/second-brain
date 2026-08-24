@@ -4,25 +4,26 @@ aliases: ["Spec F1 e F2", "Spec do motor e da IA", "Plano de execução F1+F2", 
 tags: [tcc, spec, planejamento, gestao, engine, ia, llm, scrum]
 status: em-andamento
 projeto: TCC
-criado: 2026-08-23
+criado: 2026-08-24
 ---
 
 > [!info] Projeto: [[TCC|🎓 TCC]] · Divisão: [[divisao-de-trabalho-tcc|👥 4 frentes]] · Plano da IA: [[camada-ia-plano-implementacao|🧩 Camada de IA]] · Prompt: [[prompt-padrao-recomendacao|📝 Prompt v1]] · Motor: [[engine-matching-cosseno|🧮 Engine]]
+> **Execução:** [[passo-a-passo-f1-01-f1-02|🔧 Passo a passo de F1-01 e F1-02]]
 
 # 🧭 Spec — Frentes 1 e 2 sob o mesmo dono
 
 > [!abstract] O que este documento é
-> A **especificação executável** das duas primeiras frentes da [[divisao-de-trabalho-tcc|divisão de trabalho]], agora com dono definido: **você, que também é scrum master**. Não repete o "porquê" (isso está nas notas de decisão) — aqui está o **delta entre o código que existe hoje e o que precisa existir**, tarefa a tarefa, com contrato, arquivo, teste e critério de pronto.
-> Auditoria do repositório feita em **2026-08-23**, sobre o commit `a628753`.
+> A **especificação executável** das duas primeiras frentes da [[divisao-de-trabalho-tcc|divisão de trabalho]], com dono definido: **você, que também é scrum master**. Não repete o "porquê" (isso está nas notas de decisão) — aqui está o **delta entre o código que existe hoje e o que precisa existir**, tarefa a tarefa, com contrato, arquivo, teste e critério de pronto.
+> Auditoria do repositório feita em **2026-08-24**, sobre o commit `a628753`.
 
 ## 0️⃣ O que muda na divisão
 
-| Frente | Dono anterior | Dono agora |
-|---|---|---|
-| 1️⃣ 🧮 Motor e calibração | você | **você** |
-| 2️⃣ 🤖 Camada de IA e experimento | *a definir* | **você** |
-| 3️⃣ 📚 Catálogo, trilha e integração | *a definir* | *a definir* — **é o caminho crítico, tem que sair na primeira reunião** |
-| 4️⃣ 🎨 Jornada, avaliação e indicadores | *a definir* | *a definir* |
+| Frente                                  | Dono anterior | Dono agora                                                              |
+| --------------------------------------- | ------------- | ----------------------------------------------------------------------- |
+| 1️⃣ 🧮 Motor e calibração               | você          | **você**                                                                |
+| 2️⃣ 🤖 Camada de IA e experimento       | *a definir*   | **você**                                                                |
+| 3️⃣ 📚 Catálogo, trilha e integração    | *a definir*   | *a definir* — **é o caminho crítico, tem que sair na primeira reunião** |
+| 4️⃣ 🎨 Jornada, avaliação e indicadores | *a definir*   | *a definir*                                                             |
 
 > [!success] F1 + F2 na mesma pessoa é a única fusão que não custa caro
 > As duas frentes estão **coladas no mesmo contrato**: o motor publica `build_payload`, a camada de IA consome. Era exatamente ali que ia morar a maior parte da conversa entre duas pessoas. Juntando, a fronteira vira código em vez de reunião — e o guardião do contrato passa a ser o mesmo dos dois lados.
@@ -54,7 +55,7 @@ criado: 2026-08-23
 | Configuração por `.env` | `config/settings.py` | ❌ nenhuma variável `LLM_*`; o `.env` já está no `.gitignore` |
 | Catálogo | seeds | ⚠️ **12 cursos fictícios / 7 áreas / 6 perguntas** — os 18 reais são da F3 |
 
-> [!important] O `limit=5` está escrito em três lugares e em nenhum contrato
+> [!important] O `limit=5` está escrito no código e em nenhum contrato
 > `recommend(attempt, limit=5)` traz o 5 no default da função; `web_views.py` e `views.py` chamam sem passar nada. Se o grupo decidir top-3, hoje isso vira caça ao número mágico. **É a primeira tarefa da spec** (F1-01).
 
 ---
@@ -133,7 +134,7 @@ GET /api/quiz/attempts/<pk>/entrega/
 ## 3️⃣ Migração de dados — a parte que quebra os outros
 
 > [!warning] É a única mudança desta spec que atinge código de outra frente
-> Renomear `Recommendation.rank` toca `quiz/serializers.py`, `quiz/web_views.py` e `templates/quiz/result.html`, território da **F4**. Anuncie **antes**, faça num único PR e não fatie: meia renomeação é pior que nenhuma.
+> Renomear `Recommendation.rank` toca `quiz/serializers.py`, `quiz/web_views.py` e `quiz/admin.py`, território da **F4**. Anuncie **antes**, faça num único PR e não fatie: meia renomeação é pior que nenhuma.
 
 **Campos novos em `Recommendation`:** `rank` → `rank_engine`; e nascem `rank_final`, `llm_text` (`TextField(blank=True)`), `is_primary` (`BooleanField(default=False)`).
 
@@ -141,14 +142,18 @@ GET /api/quiz/attempts/<pk>/entrega/
 
 Sequência da migração (o banco de desenvolvimento tem tentativas reais — não dá para `default=0` e seguir):
 
-1. `RenameField('rank' → 'rank_engine')`
-2. `AddField('rank_final', null=True)` e os demais campos
-3. **Data migration**: `rank_final = rank_engine` em toda linha existente
-4. `AlterField('rank_final', null=False)`
-5. `Meta.ordering = ["rank_final"]` — a ordem que o usuário viu, não a que o motor calculou
+1. Soltar o `ordering` do `Meta` (senão o state histórico aponta para um campo que deixou de existir)
+2. `RenameField('rank' → 'rank_engine')`
+3. `AddField('rank_final', null=True)` e os demais campos
+4. **Data migration**: `rank_final = rank_engine` e `is_primary = (rank_engine == 1)` em toda linha existente
+5. `AlterField('rank_final', null=False)`
+6. `ordering = ["rank_final"]` — a ordem que o usuário viu, não a que o motor calculou
 
 > [!note] Por que `ordering` passa a ser `rank_final`
 > Se ficar em `rank_engine`, toda tela e todo serializer devolvem a ordem do motor mesmo quando a LLM reordenou — e o bug aparece só no primeiro dia em que houver divergência, que tende a ser o dia da defesa. Ordenar pelo que foi entregue é o padrão seguro; quem quiser a ordem do motor pede explicitamente.
+
+> [!tip] O código exato das duas primeiras tarefas está separado
+> Migration escrita à mão, arquivo por arquivo, com os comandos de verificação: [[passo-a-passo-f1-01-f1-02|🔧 Passo a passo de F1-01 e F1-02]]. Esta spec diz **o que** e **por quê**; aquela nota é **como**, para executar com o editor aberto.
 
 ---
 
@@ -157,7 +162,7 @@ Sequência da migração (o banco de desenvolvimento tem tentativas reais — n�
 | # | Tarefa | Arquivos | Depende de | Pronto quando |
 |---|---|---|---|---|
 | **F1-01** | `RECOMMENDATION_LIMIT` no settings; `recommend(attempt, limit=None)` lê de lá | `config/settings.py`, `quiz/engine.py` | decisão top-5/top-3 | Nenhum `5` literal fora do settings; teste cobre `limit` alternativo |
-| **F1-02** | Migração dos campos novos (seção 3) | `quiz/models.py`, migration, `serializers.py`, `web_views.py`, `result.html` | anúncio à F4 | `manage.py test` verde; tentativa antiga abre no site sem erro |
+| **F1-02** | Migração dos campos novos (seção 3) | `quiz/models.py`, migration, `serializers.py`, `web_views.py`, `admin.py` | anúncio à F4 | `manage.py test` verde; tentativa antiga abre no site sem erro |
 | **F1-03** | `build_payload(attempt)` → C1 | `quiz/delivery.py` | F1-02 | Teste compara o dict com o JSON de C1, campo a campo |
 | **F1-04** | Indicador de confiança | `quiz/engine.py`, `quiz/models.py` | F1-02 | 3 testes: alta, empate técnico, perfil fraco |
 | **F1-05** | Análise de sensibilidade | `quiz/management/commands/sensibilidade.py` | catálogo (qualquer) | CSV com Δposição por Δpeso; tabela pronta para o artigo |
@@ -213,7 +218,31 @@ Decomposição dos Passos 7 a 11 do [[camada-ia-plano-implementacao|🧩 plano]]
 
 ---
 
-## 6️⃣ Testes — de 12 para ~22
+## 6️⃣ Base conceitual — o que sustenta cada tarefa
+
+> [!success] Novidade de 2026-08-24: a fundamentação parou de ser dívida
+> O vault ganhou quatro pastas de conceito (`Recomendação`, `Inteligência Artificial`, `Metodologia Científica`, `Testes`). Isso muda o peso de F1-08 e F2-11: **escrever os capítulos deixou de ser pesquisar do zero e virou amarrar código a nota que já existe**. Cada linha abaixo é uma citação que a monografia pode fazer sem inventar referência.
+
+| Tarefa | Leitura de apoio | Para quê |
+|---|---|---|
+| F1-01, F1-06 | [[rec-sistemas-de-recomendacao\|Sistemas de recomendação]] · [[rec-filtragem-conteudo\|Filtragem por conteúdo]] | Situar o EducMatch na taxonomia — é filtragem por conteúdo, não colaborativa |
+| F1-04, F1-05 | [[rec-metricas-similaridade\|Métricas de similaridade]] · [[rec-normalizacao-vetorial\|Normalização vetorial]] · [[rec-similaridade-cosseno\|Similaridade de cosseno]] | Defender **por que cosseno** e não outra métrica; o argumento do "curso gordo" tem nome próprio |
+| F1-03, F1-08 | [[rec-modelo-espaco-vetorial\|Modelo de espaço vetorial]] · [[rec-tf-idf\|TF-IDF]] | O VSM é a moldura teórica do `profile_vector` e do `course_vector` |
+| Explicação na tela | [[rec-explicabilidade\|Recomendação explicável]] | O `explanation` é o diferencial do trabalho — aqui está o vocabulário para defendê-lo |
+| F1-06 | [[rec-cold-start\|Cold start]] · [[rec-vieses-e-etica\|Vieses e ética]] | Por que o quiz existe (não há histórico) e o que a atribuição manual de pesos introduz de viés |
+| F2-04, F2-05 | [[ia-engenharia-de-prompt\|Engenharia de prompt]] | Prompt como especificação de interface — exatamente o argumento do prompt v1 em arquivo |
+| F2-06, F2-07 | [[ia-alucinacao-e-grounding\|Alucinação e grounding]] | A regra 1 do prompt + a revalidação no servidor são **contenção por arquitetura**, e é assim que se escreve isso |
+| F2-08 | [[ia-tokens-e-custo\|Tokens, custo e latência]] · [[ia-llm-fundamentos\|Fundamentos de LLM]] | Sustenta o orçamento de R$ 0 e a escolha do timeout de 8s |
+| F2-10, F2-11 | [[ia-avaliacao-de-llm\|Avaliação de LLM]] · [[rec-metricas-avaliacao\|Métricas de avaliação]] · [[rec-sistemas-hibridos\|Sistemas híbridos]] | O experimento comparativo é avaliação de saída não-determinística; as duas notas dizem como se faz isso sem virar opinião |
+| F1-07, F2-06 | [[tst-mocks-e-dubles\|Mocks e dublês]] · [[tst-testes-django\|Testes em Django]] · [[tst-piramide-de-testes\|Pirâmide de testes]] | O `FakeProvider` tem nome técnico e taxonomia; `SimpleTestCase` × `TestCase` também |
+| F1-08, F2-11 | [[met-estrutura-monografia\|Estrutura da monografia]] · [[met-validade-e-limitacoes\|Validade e limitações]] · [[met-tipos-de-pesquisa\|Tipos de pesquisa]] · [[met-normas-abnt\|ABNT]] | Onde cada capítulo entra e como declarar as limitações antes que a banca as encontre |
+
+> [!important] A nota que muda o capítulo de limitações
+> [[met-validade-e-limitacoes|Validade e limitações]] traz a taxonomia dos quatro tipos de validade. As três limitações que o TCC já assume — perfis sintéticos, pesos atribuídos por julgamento, piloto simulado — deixam de ser um parágrafo de desculpas e viram **ameaças à validade classificadas**, que é a forma que a banca reconhece. Vale ler antes de escrever qualquer capítulo, não depois.
+
+---
+
+## 7️⃣ Testes — de 12 para ~22
 
 | Nova cobertura | Frente | Tipo |
 |---|---|---|
@@ -232,7 +261,7 @@ Decomposição dos Passos 7 a 11 do [[camada-ia-plano-implementacao|🧩 plano]]
 
 ---
 
-## 7️⃣ Plano — 5 semanas, alinhado ao calendário do grupo
+## 8️⃣ Plano — 5 semanas, alinhado ao calendário do grupo
 
 | Semana | Período | F1 (motor) | F2 (IA) | Entregável fechado |
 |---|---|---|---|---|
@@ -249,13 +278,13 @@ Decomposição dos Passos 7 a 11 do [[camada-ia-plano-implementacao|🧩 plano]]
 
 1. Fechar os nomes das frentes 3 e 4 no kickoff — **a F3 é o caminho crítico do TCC inteiro**
 2. Decidir top-5 ou top-3 e registrar ([[escopo-fluxo-educmatch|🗺️ ponto 2]] — a divergência entre o quadro e a decisão continua aberta)
-3. `git checkout -b feat/motor` → F1-01
+3. `git checkout -b feat/motor` → F1-01, seguindo o [[passo-a-passo-f1-01-f1-02|🔧 passo a passo]]
 4. Anunciar a renomeação `rank → rank_engine` ao grupo **antes** de abrir o PR
 5. F1-02 e F1-03 no mesmo PR, com os testes junto
 
 ---
 
-## 8️⃣ Decisões que precisam sair do kickoff
+## 9️⃣ Decisões que precisam sair do kickoff
 
 > [!todo] Sem estas cinco, a semana 1 não começa limpa
 > 1. **Top-5 ou top-3** — trava F1-01 e o texto do prompt. *Recomendação: manter top-5; o formato 1+4 já está desenhado e mandar 5 candidatos custa quase o mesmo que 3.*
@@ -266,11 +295,11 @@ Decomposição dos Passos 7 a 11 do [[camada-ia-plano-implementacao|🧩 plano]]
 
 ---
 
-## 9️⃣ Seus ritos como scrum master
+## 🔟 Seus ritos como scrum master
 
 | Rito | Quando | O que sai dele |
 |---|---|---|
-| Kickoff | antes de 24/08 | As 5 decisões da seção 8 |
+| Kickoff | antes de 24/08 | As 5 decisões da seção 9 |
 | Semanal de 30 min | fixo, mesma hora | "o que fechei / o que trava / o que preciso de quem", por frente |
 | Revisão de contrato | sob demanda | Nenhuma mudança de formato entra sem anúncio prévio |
 | Fechamento de semana | sexta | O que fechou e o que rolou — rolar duas semanas seguidas é sinal de escopo errado, não de preguiça |
@@ -280,8 +309,10 @@ Decomposição dos Passos 7 a 11 do [[camada-ia-plano-implementacao|🧩 plano]]
 
 ## 📎 Veja também
 
+- [[passo-a-passo-f1-01-f1-02|🔧 Passo a passo de F1-01 e F1-02]] — o código, arquivo por arquivo
 - [[divisao-de-trabalho-tcc|👥 Divisão de trabalho entre as 4 frentes]] · [[escopo-fluxo-educmatch|🗺️ Escopo EducMatch]]
 - [[camada-ia-plano-implementacao|🧩 Plano da camada de IA]] · [[prompt-padrao-recomendacao|📝 Prompt padrão v1]] · [[decisao-camada-ia|🤖 Decisão da camada de IA]]
 - [[engine-matching-cosseno|🧮 Engine de matching]] · [[modelagem-dados-quiz|🗃️ Modelagem]] · [[testes-e-validacao-tcc|✅ Testes]]
-- [[artigo-secao-calculo-cosseno|✍️ Artigo: seção do cálculo]] · [[defesa-monografia-tcc|🎤 Defesa e monografia]]
+- [[artigo-secao-calculo-cosseno|✍️ Artigo: seção do cálculo]] · [[defesa-monografia-tcc|🎤 Defesa e monografia]] · [[fundamentacao-teorica-recomendacao|📖 Fundamentação teórica]]
+- **Conceitos:** [[rec-similaridade-cosseno|Cosseno]] · [[rec-explicabilidade|Explicabilidade]] · [[ia-engenharia-de-prompt|Engenharia de prompt]] · [[ia-avaliacao-de-llm|Avaliação de LLM]] · [[met-validade-e-limitacoes|Validade e limitações]] · [[tst-mocks-e-dubles|Mocks e dublês]]
 - [[TCC|🎓 TCC]] · [[Projetos|🚀 Projetos]]
