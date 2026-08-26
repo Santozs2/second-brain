@@ -29,6 +29,7 @@ updated: 2026-08-25
 - [[divisao-de-trabalho-tcc|👥 Divisão de trabalho (4 frentes)]] — quem faz o quê e as fronteiras entre as partes
 - [[spec-motor-e-ia-frentes-1-2|🧭 Spec das Frentes 1 e 2]] — backlog, contratos e cronograma do motor e da camada de IA
 - [[passo-a-passo-f1-01-f1-02|🔧 Passo a passo de F1-01 e F1-02]] — o código das duas primeiras tarefas, arquivo por arquivo
+- [[plano-execucao-f1-f2|🗂️ Plano de execução F1+F2]] — os sete blocos do motor e da camada de IA, em ordem de PR
 - [[handoff-autenticacao-colaborador|🤝 Handoff da autenticação]] — a trilha AUT-01 a AUT-12 entregue a outro colaborador
 - [[spec-autenticacao-lista-interesse|🔐 Spec de autenticação e lista de interesse]] — conta de usuário, registro de interesse e a métrica de conversão
 - [[passo-a-passo-aut-01-aut-03|🔑 Passo a passo de AUT-01 a AUT-03]] — o app `accounts`, o User por e-mail e as telas de acesso, arquivo por arquivo
