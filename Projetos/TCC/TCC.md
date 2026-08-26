@@ -31,6 +31,9 @@ updated: 2026-08-25
 - [[passo-a-passo-f1-01-f1-02|🔧 Passo a passo de F1-01 e F1-02]] — o código das duas primeiras tarefas, arquivo por arquivo
 - [[plano-execucao-f1-f2|🗂️ Plano de execução F1+F2]] — os sete blocos do motor e da camada de IA, em ordem de PR
 - [[passo-a-passo-f1-04-f1-03|🎚️ Passo a passo de F1-04 e F1-03]] — conjunto de empate, banda e o `build_payload`
+- [[passo-a-passo-f2-01-f2-03|🔌 Passo a passo de F2-01 a F2-03]] — protocolo, `FakeProvider` e configuração por `.env`
+- [[passo-a-passo-f2-04-f2-06|📝 Passo a passo de F2-04 a F2-06]] — prompt em arquivo, carregador e as 5 regras de validação
+- [[comando-ver-payload|🔍 Ferramenta `ver_payload`]] — inspecionar o que a camada de IA recebe
 - [[handoff-autenticacao-colaborador|🤝 Handoff da autenticação]] — a trilha AUT-01 a AUT-12 entregue a outro colaborador
 - [[spec-autenticacao-lista-interesse|🔐 Spec de autenticação e lista de interesse]] — conta de usuário, registro de interesse e a métrica de conversão
 - [[passo-a-passo-aut-01-aut-03|🔑 Passo a passo de AUT-01 a AUT-03]] — o app `accounts`, o User por e-mail e as telas de acesso, arquivo por arquivo
