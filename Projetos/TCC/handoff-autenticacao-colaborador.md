@@ -14,7 +14,7 @@ criado: 2026-08-25
 > [!abstract] Para quem é esta nota
 > Para o **colaborador que vai assumir a autenticação inteira**, do zero até a lista de interesse funcionando. Ela é auto-suficiente: você não precisa ter participado das reuniões anteriores nem ler as specs do motor.
 > Leia as três primeiras seções antes de escrever qualquer código. Depois disso, é seguir os blocos na ordem.
-> Repositório auditado em **2026-08-25**, sobre o commit `1068eb0`.
+> Repositório auditado em **2026-08-25**, sobre o commit `0fb9df1` (`main`).
 
 > [!success] O tamanho real do trabalho
 > `django.contrib.auth` já está ligado no projeto — sessão, hash de senha, validadores, `login_required`, `{{ user.is_authenticated }}` nos templates. **Nada disso precisa ser escrito.** Sua trilha é: um app, um modelo de usuário, um modelo de interesse, cinco telas e as regras de quem-vê-o-quê. São doze tarefas, cinco entregas, e nenhuma delas depende de internet, API paga ou dado que outra pessoa precise te entregar.
@@ -29,6 +29,7 @@ criado: 2026-08-25
 | Quiz, engine de recomendação, tela de resultado | ✅ funcionando fim a fim |
 | `django.contrib.auth`, sessão, middlewares, validadores de senha | ✅ ligados desde o dia 1 |
 | Suíte de testes | ✅ **14 verdes** — a sua trilha leva para ~25 |
+| Migrations do app `quiz` | `0001_initial` e `0002_camada_ia` — **a sua será a `0003`** |
 | Usuários no banco | **0 registros** — é o que torna a AUT-01 barata |
 | App `accounts`, telas de acesso, modelo de interesse | ❌ não existem — é o seu trabalho |
 | `LOGIN_URL`, `LOGIN_REDIRECT_URL` | ❌ não definidos |
@@ -53,6 +54,9 @@ PYTHONIOENCODING=utf-8 ./.venv/Scripts/python.exe manage.py test
 ```
 
 **14 testes verdes** antes de você tocar em qualquer coisa. Se não estiverem, o problema não é seu — avise o scrum master antes de começar.
+
+> [!danger] Se você já tinha clonado o repositório antes, dê `git pull` na `main` **antes** de criar qualquer branch
+> A `main` andou: o motor entregou as tarefas F1-01 e F1-02, e com elas a migration `0002_camada_ia` do app `quiz`. Se você criar a sua branch a partir de um clone antigo, a sua migration nasce `0002` também — **duas `0002` no mesmo app é o único conflito desta divisão que o Git não resolve sozinho**, e vocês só descobrem no merge.
 
 > [!note] `PYTHONIOENCODING=utf-8` não é frescura
 > Os nomes de curso têm acento e o console do Windows quebra sem isso. Vale para `manage.py test` e para `manage.py test_engine`.
@@ -95,6 +99,17 @@ feat(contas): vincula tentativa ao usuario e fecha o resultado
 fix(contas): logout por POST no header
 test(contas): cobre claim de tentativa anonima
 ```
+
+### O merge é **squash**
+
+Na hora de mesclar, clique na setinha ao lado do botão verde e escolha **Squash and merge** — não o merge commit padrão. O grupo adotou isso no primeiro PR: **um PR = um commit na `main`**. O motivo está na [[git-fluxo-aplicado-tcc|nota de git]] — o `git log --oneline` vira a linha do tempo do desenvolvimento na monografia, e commit de merge no meio suja essa leitura.
+
+> [!note] Depois do squash, `git branch -d` vai recusar apagar a sua branch
+> Squash cria um commit **novo** na `main`, então o commit original nunca vira ancestral dela e o Git não reconhece a branch como mesclada. Use `-D` maiúsculo:
+> ```bash
+> git checkout main && git pull && git branch -D feat/autenticacao
+> ```
+> É seguro: o conteúdo está no commit que entrou na `main`.
 
 ### O PR
 
@@ -205,7 +220,7 @@ Sai `quiz/migrations/0003_quizattempt_user.py`. Confira que as dependências fic
 > A [[passo-a-passo-f1-01-f1-02|migration do motor]] tinha um `RenameField` e precisava copiar valores de um campo para outro — o `makemigrations` faz pergunta interativa e não sabe copiar dado. **Aqui é um `AddField` puro com valor nulo**, que é exatamente o caso em que o autodetector acerta sozinho. Escrever à mão só adicionaria chance de erro.
 
 > [!success] A numeração já está resolvida
-> O `0002_camada_ia` entrou na `main` no commit `1068eb0` (tarefas F1-01 e F1-02 do motor). Desde que você tenha dado `git pull` antes de criar a branch, a sua é a `0003` e não vai colidir com ninguém.
+> O `0002_camada_ia` entrou na `main` no PR #1, commit `0fb9df1` (tarefas F1-01 e F1-02 do motor). Desde que você tenha dado `git pull` antes de criar a branch, a sua é a `0003` e não vai colidir com ninguém.
 
 ### 6.3 `quiz/web_views.py` — sessão e autorização
 
@@ -424,6 +439,20 @@ Mais o `admin.py` com `list_filter` por curso e por status: é por ali que a def
 ---
 
 ## 🔟 Coordenação — o que avisar e o que não tocar
+
+### O que está rodando em paralelo com você
+
+O scrum master está na trilha do motor e da camada de IA ([[plano-execucao-f1-f2|🗂️ plano de execução F1+F2]]), no bloco de conjunto de empate e `build_payload`. **Nenhuma linha se cruza com a sua** nos seus dois primeiros blocos:
+
+| Arquivo | Você | Ele |
+|---|:---:|:---:|
+| `accounts/`, `templates/accounts/`, `base.html`, `style.css` | ✅ | — |
+| `quiz/models.py`, `quiz/web_views.py`, `quiz/views.py` | ✅ AUT-04/05 | — |
+| `config/settings.py` | ✅ | — (as variáveis `LLM_*` são de um bloco posterior dele) |
+| `quiz/engine.py`, `quiz/delivery.py` | — | ✅ |
+
+> [!important] Mescle o Bloco 1 cedo — de preferência esta semana
+> O `AUTH_USER_MODEL` obriga **todo mundo** a apagar o banco local uma vez. A interrupção custa dois minutos, seja hoje ou daqui a dez dias. A diferença é quanta coisa já vai ter sido cadastrada à mão no `/admin` até lá — e essa parte não volta.
 
 ### O recado do Bloco 1, antes do PR
 
