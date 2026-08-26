@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1580" width="1800" height="1580" font-family="Segoe UI, Calibri, Arial, sans-serif">
+<rect width="1800" height="1580" fill="#ffffff"/>
+<text x="40" y="52" font-size="26" font-weight="700" fill="#0f172a">DER — QuizPessoal · Recomendador de Cursos por Perfil</text>
+<text x="40" y="78" font-size="14" fill="#475569">Modelo Entidade-Relacionamento (notação de Chen) · TCC · Django + SQLite</text>
+<path d="M1230,207 L1390,207 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="1235.0,207 1310,180.0 1385.0,207 1310,234.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="1310" y="212" font-size="13.5" text-anchor="middle" fill="#0f172a">Classifica</text>
+<text x="1248" y="192" font-size="14" font-weight="700" fill="#1e3a8a">1</text>
+<text x="1372" y="192" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<path d="M285,274 L285,424 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="210.0,349 285,322.0 360.0,349 285,376.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="285" y="354" font-size="13.5" text-anchor="middle" fill="#0f172a">Oferece</text>
+<text x="298" y="294" font-size="14" font-weight="700" fill="#1e3a8a">1</text>
+<text x="298" y="414" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<path d="M410,480 L570,480 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="415.0,480 490,453.0 565.0,480 490,507.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="490" y="485" font-size="13.5" text-anchor="middle" fill="#0f172a">Pondera</text>
+<text x="428" y="465" font-size="14" font-weight="700" fill="#1e3a8a">1</text>
+<text x="552" y="465" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<path d="M1040,274 L1040,348 L695,348 L695,424 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="793.0,348 868,321.0 943.0,348 868,375.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="868" y="353" font-size="13.5" text-anchor="middle" fill="#0f172a">Dimensiona</text>
+<text x="1054" y="294" font-size="14" font-weight="700" fill="#1e3a8a">1</text>
+<text x="708" y="414" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<path d="M1515,362 L1515,512 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="1440.0,437 1515,410.0 1590.0,437 1515,464.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="1515" y="442" font-size="13.5" text-anchor="middle" fill="#0f172a">Pondera</text>
+<text x="1528" y="382" font-size="14" font-weight="700" fill="#1e3a8a">1</text>
+<text x="1528" y="504" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<path d="M1170,274 L1170,568 L1390,568 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="1205.0,568 1280,541.0 1355.0,568 1280,595.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="1280" y="573" font-size="13.5" text-anchor="middle" fill="#0f172a">Dimensiona</text>
+<text x="1184" y="294" font-size="14" font-weight="700" fill="#1e3a8a">1</text>
+<text x="1372" y="553" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<path d="M285,558 L285,708 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="210.0,633 285,606.0 360.0,633 285,660.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="285" y="638" font-size="13.5" text-anchor="middle" fill="#0f172a">Escolhe</text>
+<text x="298" y="578" font-size="14" font-weight="700" fill="#1e3a8a">1</text>
+<text x="298" y="698" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<path d="M160,207 L80,207 L80,764 L160,764 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="15.0,480 80,453.0 145.0,480 80,507.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="80" y="485" font-size="13.5" text-anchor="middle" fill="#0f172a">Responde</text>
+<text x="100" y="227" font-size="14" font-weight="700" fill="#1e3a8a">1</text>
+<text x="100" y="750" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<path d="M410,764 L570,764 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="415.0,764 490,737.0 565.0,764 490,791.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="490" y="769" font-size="13.5" text-anchor="middle" fill="#0f172a">Contém</text>
+<text x="428" y="749" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<text x="552" y="749" font-size="14" font-weight="700" fill="#1e3a8a">1</text>
+<path d="M820,842 L980,842 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="825.0,842 900,815.0 975.0,842 900,869.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="900" y="847" font-size="13.5" text-anchor="middle" fill="#0f172a">Gera</text>
+<text x="838" y="827" font-size="14" font-weight="700" fill="#1e3a8a">1</text>
+<text x="962" y="827" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<path d="M1640,310 L1690,310 L1690,900 L1230,900 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="1385.0,900 1460,873.0 1535.0,900 1460,927.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="1460" y="905" font-size="13.5" text-anchor="middle" fill="#0f172a">Recomenda</text>
+<text x="1652" y="296" font-size="14" font-weight="700" fill="#1e3a8a">1</text>
+<text x="1248" y="886" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<path d="M570,906 L490,906 L490,1263 L410,1263 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="425.0,1080 490,1053.0 555.0,1080 490,1107.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="490" y="1085" font-size="13.5" text-anchor="middle" fill="#0f172a">Registra</text>
+<text x="552" y="891" font-size="14" font-weight="700" fill="#1e3a8a">1</text>
+<text x="428" y="1248" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<path d="M695,930 L695,1080 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="630.0,1005 695,978.0 760.0,1005 695,1032.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="695" y="1010" font-size="13.5" text-anchor="middle" fill="#0f172a">Efetua</text>
+<text x="708" y="950" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<text x="708" y="1072" font-size="14" font-weight="700" fill="#1e3a8a">0..1</text>
+<path d="M820,1158 L980,1158 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="825.0,1158 900,1131.0 975.0,1158 900,1185.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="900" y="1163" font-size="13.5" text-anchor="middle" fill="#0f172a">Manifesta</text>
+<text x="838" y="1143" font-size="14" font-weight="700" fill="#1e3a8a">1</text>
+<text x="962" y="1143" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<path d="M790,930 L790,1020 L1105,1020 L1105,1080 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="875.0,1020 940,993.0 1005.0,1020 940,1047.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="940" y="1025" font-size="13.5" text-anchor="middle" fill="#0f172a">Origina</text>
+<text x="803" y="950" font-size="14" font-weight="700" fill="#1e3a8a">0..1</text>
+<text x="1118" y="1072" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<path d="M1640,354 L1720,354 L1720,1200 L1230,1200 " fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<polygon points="1385.0,1200 1460,1173.0 1535.0,1200 1460,1227.0" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="1460" y="1205" font-size="13.5" text-anchor="middle" fill="#0f172a">Recebe</text>
+<text x="1652" y="376" font-size="14" font-weight="700" fill="#1e3a8a">1</text>
+<text x="1248" y="1185" font-size="14" font-weight="700" fill="#1e3a8a">n</text>
+<rect x="980" y="140" width="250" height="134" rx="3" fill="#ffffff" stroke="#1d4ed8" stroke-width="2.2"/>
+<path d="M981,174 h248 v-31 a3,3 0 0 0 -3,-3 h-242 a3,3 0 0 0 -3,3 z" fill="#dbeafe"/>
+<line x1="981" y1="174" x2="1229" y2="174" stroke="#1d4ed8" stroke-width="1.4"/>
+<text x="1105.0" y="163" font-size="16.5" font-weight="700" text-anchor="middle" fill="#0f172a">ÁREA</text>
+<text x="994" y="191" font-size="12.8" font-weight="700" fill="#0f172a">Código *</text>
+<text x="994" y="213" font-size="12.8" font-weight="400" fill="#1f2937">Slug (único)</text>
+<text x="994" y="235" font-size="12.8" font-weight="400" fill="#1f2937">Nome</text>
+<text x="994" y="257" font-size="12.8" font-weight="400" fill="#1f2937">Descrição</text>
+<rect x="1390" y="140" width="250" height="222" rx="3" fill="#ffffff" stroke="#1d4ed8" stroke-width="2.2"/>
+<path d="M1391,174 h248 v-31 a3,3 0 0 0 -3,-3 h-242 a3,3 0 0 0 -3,3 z" fill="#dbeafe"/>
+<line x1="1391" y1="174" x2="1639" y2="174" stroke="#1d4ed8" stroke-width="1.4"/>
+<text x="1515.0" y="163" font-size="16.5" font-weight="700" text-anchor="middle" fill="#0f172a">CURSO</text>
+<text x="1404" y="191" font-size="12.8" font-weight="700" fill="#0f172a">Código *</text>
+<text x="1404" y="213" font-size="12.8" font-weight="400" fill="#1f2937">Nome</text>
+<text x="1404" y="235" font-size="12.8" font-weight="400" fill="#1f2937">Descrição</text>
+<text x="1404" y="257" font-size="12.8" font-weight="400" fill="#1f2937">Carga Horária</text>
+<text x="1404" y="279" font-size="12.8" font-weight="400" fill="#1f2937">Data Início</text>
+<text x="1404" y="301" font-size="12.8" font-weight="400" fill="#1f2937">Data Fim</text>
+<text x="1404" y="323" font-size="12.8" font-weight="400" fill="#1f2937">Ativo</text>
+<text x="1404" y="345" font-size="12.8" font-weight="400" fill="#1f2937">Código Área °</text>
+<rect x="1390" y="512" width="250" height="112" rx="3" fill="#ffffff" stroke="#1d4ed8" stroke-width="2.2"/>
+<rect x="1395" y="517" width="240" height="102" rx="2" fill="none" stroke="#1d4ed8" stroke-width="1.2"/>
+<path d="M1396,551 h238 v-31 a3,3 0 0 0 -3,-3 h-232 a3,3 0 0 0 -3,3 z" fill="#dbeafe"/>
+<line x1="1396" y1="551" x2="1634" y2="551" stroke="#1d4ed8" stroke-width="1.4"/>
+<text x="1515.0" y="540" font-size="16.5" font-weight="700" text-anchor="middle" fill="#0f172a">CURSO_ÁREA</text>
+<text x="1404" y="568" font-size="12.8" font-weight="700" fill="#0f172a">Código Curso *</text>
+<text x="1404" y="590" font-size="12.8" font-weight="700" fill="#0f172a">Código Área *</text>
+<text x="1404" y="612" font-size="12.8" font-weight="400" fill="#1f2937">Peso (0–5)</text>
+<rect x="160" y="140" width="250" height="134" rx="3" fill="#ffffff" stroke="#15803d" stroke-width="2.2"/>
+<path d="M161,174 h248 v-31 a3,3 0 0 0 -3,-3 h-242 a3,3 0 0 0 -3,3 z" fill="#dcfce7"/>
+<line x1="161" y1="174" x2="409" y2="174" stroke="#15803d" stroke-width="1.4"/>
+<text x="285.0" y="163" font-size="16.5" font-weight="700" text-anchor="middle" fill="#0f172a">PERGUNTA</text>
+<text x="174" y="191" font-size="12.8" font-weight="700" fill="#0f172a">Código *</text>
+<text x="174" y="213" font-size="12.8" font-weight="400" fill="#1f2937">Texto</text>
+<text x="174" y="235" font-size="12.8" font-weight="400" fill="#1f2937">Ordem</text>
+<text x="174" y="257" font-size="12.8" font-weight="400" fill="#1f2937">Ativa</text>
+<rect x="160" y="424" width="250" height="134" rx="3" fill="#ffffff" stroke="#15803d" stroke-width="2.2"/>
+<path d="M161,458 h248 v-31 a3,3 0 0 0 -3,-3 h-242 a3,3 0 0 0 -3,3 z" fill="#dcfce7"/>
+<line x1="161" y1="458" x2="409" y2="458" stroke="#15803d" stroke-width="1.4"/>
+<text x="285.0" y="447" font-size="16.5" font-weight="700" text-anchor="middle" fill="#0f172a">ALTERNATIVA</text>
+<text x="174" y="475" font-size="12.8" font-weight="700" fill="#0f172a">Código *</text>
+<text x="174" y="497" font-size="12.8" font-weight="400" fill="#1f2937">Texto</text>
+<text x="174" y="519" font-size="12.8" font-weight="400" fill="#1f2937">Ordem</text>
+<text x="174" y="541" font-size="12.8" font-weight="400" fill="#1f2937">Código Pergunta °</text>
+<rect x="570" y="424" width="250" height="112" rx="3" fill="#ffffff" stroke="#15803d" stroke-width="2.2"/>
+<rect x="575" y="429" width="240" height="102" rx="2" fill="none" stroke="#15803d" stroke-width="1.2"/>
+<path d="M576,463 h238 v-31 a3,3 0 0 0 -3,-3 h-232 a3,3 0 0 0 -3,3 z" fill="#dcfce7"/>
+<line x1="576" y1="463" x2="814" y2="463" stroke="#15803d" stroke-width="1.4"/>
+<text x="695.0" y="452" font-size="16.5" font-weight="700" text-anchor="middle" fill="#0f172a">ALTERNATIVA_ÁREA</text>
+<text x="584" y="480" font-size="12.8" font-weight="700" fill="#0f172a">Código Alternativa *</text>
+<text x="584" y="502" font-size="12.8" font-weight="700" fill="#0f172a">Código Área *</text>
+<text x="584" y="524" font-size="12.8" font-weight="400" fill="#1f2937">Peso (0–5)</text>
+<rect x="160" y="708" width="250" height="112" rx="3" fill="#ffffff" stroke="#b45309" stroke-width="2.2"/>
+<rect x="165" y="713" width="240" height="102" rx="2" fill="none" stroke="#b45309" stroke-width="1.2"/>
+<path d="M166,747 h238 v-31 a3,3 0 0 0 -3,-3 h-232 a3,3 0 0 0 -3,3 z" fill="#fef3c7"/>
+<line x1="166" y1="747" x2="404" y2="747" stroke="#b45309" stroke-width="1.4"/>
+<text x="285.0" y="736" font-size="16.5" font-weight="700" text-anchor="middle" fill="#0f172a">RESPOSTA</text>
+<text x="174" y="764" font-size="12.8" font-weight="700" fill="#0f172a">Código Tentativa *</text>
+<text x="174" y="786" font-size="12.8" font-weight="700" fill="#0f172a">Código Pergunta *</text>
+<text x="174" y="808" font-size="12.8" font-weight="400" fill="#1f2937">Código Alternativa °</text>
+<rect x="570" y="708" width="250" height="222" rx="3" fill="#ffffff" stroke="#b45309" stroke-width="2.2"/>
+<path d="M571,742 h248 v-31 a3,3 0 0 0 -3,-3 h-242 a3,3 0 0 0 -3,3 z" fill="#fef3c7"/>
+<line x1="571" y1="742" x2="819" y2="742" stroke="#b45309" stroke-width="1.4"/>
+<text x="695.0" y="731" font-size="16.5" font-weight="700" text-anchor="middle" fill="#0f172a">TENTATIVA</text>
+<text x="584" y="759" font-size="12.8" font-weight="700" fill="#0f172a">Código *</text>
+<text x="584" y="781" font-size="12.8" font-weight="400" fill="#1f2937">Data Hora</text>
+<text x="584" y="803" font-size="12.8" font-weight="400" fill="#1f2937">Nome Respondente</text>
+<text x="584" y="825" font-size="12.8" font-weight="400" fill="#7e22ce">Vetor Perfil ▪</text>
+<text x="584" y="847" font-size="12.8" font-weight="400" fill="#1f2937">Gap Confiança</text>
+<text x="584" y="869" font-size="12.8" font-weight="400" fill="#1f2937">Faixa Confiança</text>
+<text x="584" y="891" font-size="12.8" font-weight="400" fill="#1f2937">Empates</text>
+<text x="584" y="913" font-size="12.8" font-weight="400" fill="#1f2937">Código Usuário °</text>
+<rect x="980" y="708" width="250" height="266" rx="3" fill="#ffffff" stroke="#b45309" stroke-width="2.2"/>
+<path d="M981,742 h248 v-31 a3,3 0 0 0 -3,-3 h-242 a3,3 0 0 0 -3,3 z" fill="#fef3c7"/>
+<line x1="981" y1="742" x2="1229" y2="742" stroke="#b45309" stroke-width="1.4"/>
+<text x="1105.0" y="731" font-size="16.5" font-weight="700" text-anchor="middle" fill="#0f172a">RECOMENDAÇÃO</text>
+<text x="994" y="759" font-size="12.8" font-weight="700" fill="#0f172a">Código *</text>
+<text x="994" y="781" font-size="12.8" font-weight="400" fill="#1f2937">Código Tentativa °</text>
+<text x="994" y="803" font-size="12.8" font-weight="400" fill="#1f2937">Código Curso °</text>
+<text x="994" y="825" font-size="12.8" font-weight="400" fill="#1f2937">Score</text>
+<text x="994" y="847" font-size="12.8" font-weight="400" fill="#7e22ce">Vetor Curso ▪</text>
+<text x="994" y="869" font-size="12.8" font-weight="400" fill="#1f2937">Rank Engine</text>
+<text x="994" y="891" font-size="12.8" font-weight="400" fill="#1f2937">Rank Final</text>
+<text x="994" y="913" font-size="12.8" font-weight="400" fill="#1f2937">Explicação</text>
+<text x="994" y="935" font-size="12.8" font-weight="400" fill="#1f2937">Texto IA</text>
+<text x="994" y="957" font-size="12.8" font-weight="400" fill="#1f2937">Principal</text>
+<rect x="160" y="1130" width="250" height="266" rx="3" fill="#ffffff" stroke="#b45309" stroke-width="2.2" stroke-dasharray="8 5"/>
+<path d="M161,1164 h248 v-31 a3,3 0 0 0 -3,-3 h-242 a3,3 0 0 0 -3,3 z" fill="#fef3c7"/>
+<line x1="161" y1="1164" x2="409" y2="1164" stroke="#b45309" stroke-width="1.4"/>
+<text x="285.0" y="1153" font-size="16.5" font-weight="700" text-anchor="middle" fill="#0f172a">EXECUÇÃO_IA</text>
+<text x="174" y="1181" font-size="12.8" font-weight="700" fill="#0f172a">Código *</text>
+<text x="174" y="1203" font-size="12.8" font-weight="400" fill="#1f2937">Código Tentativa °</text>
+<text x="174" y="1225" font-size="12.8" font-weight="400" fill="#1f2937">Modelo</text>
+<text x="174" y="1247" font-size="12.8" font-weight="400" fill="#1f2937">Versão Prompt</text>
+<text x="174" y="1269" font-size="12.8" font-weight="400" fill="#1f2937">Latência (ms)</text>
+<text x="174" y="1291" font-size="12.8" font-weight="400" fill="#1f2937">Tokens Entrada</text>
+<text x="174" y="1313" font-size="12.8" font-weight="400" fill="#1f2937">Tokens Saída</text>
+<text x="174" y="1335" font-size="12.8" font-weight="400" fill="#1f2937">Fallback</text>
+<text x="174" y="1357" font-size="12.8" font-weight="400" fill="#1f2937">Divergiu</text>
+<text x="174" y="1379" font-size="12.8" font-weight="400" fill="#1f2937">Cache</text>
+<rect x="570" y="1080" width="250" height="156" rx="3" fill="#ffffff" stroke="#7e22ce" stroke-width="2.2" stroke-dasharray="8 5"/>
+<path d="M571,1114 h248 v-31 a3,3 0 0 0 -3,-3 h-242 a3,3 0 0 0 -3,3 z" fill="#f3e8ff"/>
+<line x1="571" y1="1114" x2="819" y2="1114" stroke="#7e22ce" stroke-width="1.4"/>
+<text x="695.0" y="1103" font-size="16.5" font-weight="700" text-anchor="middle" fill="#0f172a">USUÁRIO</text>
+<text x="584" y="1131" font-size="12.8" font-weight="700" fill="#0f172a">Código *</text>
+<text x="584" y="1153" font-size="12.8" font-weight="400" fill="#1f2937">E-mail (único)</text>
+<text x="584" y="1175" font-size="12.8" font-weight="400" fill="#1f2937">Nome</text>
+<text x="584" y="1197" font-size="12.8" font-weight="400" fill="#1f2937">Senha</text>
+<text x="584" y="1219" font-size="12.8" font-weight="400" fill="#1f2937">Data Cadastro</text>
+<rect x="980" y="1080" width="250" height="244" rx="3" fill="#ffffff" stroke="#7e22ce" stroke-width="2.2" stroke-dasharray="8 5"/>
+<path d="M981,1114 h248 v-31 a3,3 0 0 0 -3,-3 h-242 a3,3 0 0 0 -3,3 z" fill="#f3e8ff"/>
+<line x1="981" y1="1114" x2="1229" y2="1114" stroke="#7e22ce" stroke-width="1.4"/>
+<text x="1105.0" y="1103" font-size="16.5" font-weight="700" text-anchor="middle" fill="#0f172a">INTERESSE</text>
+<text x="994" y="1131" font-size="12.8" font-weight="700" fill="#0f172a">Código *</text>
+<text x="994" y="1153" font-size="12.8" font-weight="400" fill="#1f2937">Código Usuário °</text>
+<text x="994" y="1175" font-size="12.8" font-weight="400" fill="#1f2937">Código Curso °</text>
+<text x="994" y="1197" font-size="12.8" font-weight="400" fill="#1f2937">Código Tentativa °</text>
+<text x="994" y="1219" font-size="12.8" font-weight="400" fill="#1f2937">Score Snapshot</text>
+<text x="994" y="1241" font-size="12.8" font-weight="400" fill="#1f2937">Rank Snapshot</text>
+<text x="994" y="1263" font-size="12.8" font-weight="400" fill="#1f2937">Foi Principal</text>
+<text x="994" y="1285" font-size="12.8" font-weight="400" fill="#1f2937">Status</text>
+<text x="994" y="1307" font-size="12.8" font-weight="400" fill="#1f2937">Data</text>
+<rect x="40" y="1400" width="1720" height="150" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="60" y="1428" font-size="15" font-weight="700" fill="#0f172a">Legenda</text>
+<rect x="60" y="1449" width="34" height="20" rx="2" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="106" y="1464" font-size="13.5" fill="#1f2937">Entidade — vira uma tabela no banco</text>
+<polygon points="60,1489 77,1477 94,1489 77,1501" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<text x="106" y="1494" font-size="13.5" fill="#1f2937">Relacionamento — o verbo que liga duas entidades</text>
+<rect x="60" y="1509" width="34" height="20" rx="2" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+<rect x="63" y="1512" width="28" height="14" fill="none" stroke="#334155" stroke-width="1"/>
+<text x="106" y="1524" font-size="13.5" fill="#1f2937">Entidade associativa — chave primária composta pelas duas FKs</text>
+<rect x="740" y="1449" width="34" height="20" rx="2" fill="#ffffff" stroke="#7e22ce" stroke-width="1.8" stroke-dasharray="6 4"/>
+<text x="786" y="1464" font-size="13.5" fill="#1f2937">Entidade prevista — ainda não implementada</text>
+<line x1="740" y1="1489" x2="774" y2="1489" stroke="#3b82f6" stroke-width="1.8"/>
+<text x="786" y="1494" font-size="13.5" fill="#1f2937">1 — n  ·  cardinalidade  ·  0..1 = participação opcional</text>
+<text x="786" y="1524" font-size="13.5" fill="#1f2937">*  chave primária    °  chave estrangeira    ▪  campo proposto (P1)</text>
+<text x="60" y="1568" font-size="13.5" fill="#1f2937"></text>
+<text x="1410" y="1434" font-size="13" font-weight="700" fill="#334155">Cores por bloco</text>
+<rect x="1410" y="1445" width="26" height="16" rx="2" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.4"/>
+<text x="1446" y="1458" font-size="13" fill="#1f2937">catálogo</text>
+<rect x="1410" y="1469" width="26" height="16" rx="2" fill="#dcfce7" stroke="#15803d" stroke-width="1.4"/>
+<text x="1446" y="1482" font-size="13" fill="#1f2937">instrumento de medida</text>
+<rect x="1410" y="1493" width="26" height="16" rx="2" fill="#fef3c7" stroke="#b45309" stroke-width="1.4"/>
+<text x="1446" y="1506" font-size="13" fill="#1f2937">execução e resultado</text>
+<rect x="1410" y="1517" width="26" height="16" rx="2" fill="#f3e8ff" stroke="#7e22ce" stroke-width="1.4"/>
+<text x="1446" y="1530" font-size="13" fill="#1f2937">contas e interesse</text>
+</svg>

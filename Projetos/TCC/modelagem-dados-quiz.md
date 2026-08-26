@@ -107,6 +107,9 @@ O `Recommendation.explanation` é um `JSONField` com as áreas que mais contribu
 
 O resultado fica **congelado** no banco. Se os pesos de um curso mudarem amanhã, a tentativa de hoje continua mostrando o que a pessoa realmente viu. Isso dá reprodutibilidade — e um histórico analisável para a monografia.
 
+> [!warning] Congelado, mas não auditável
+> O que fica congelado é **o que a pessoa viu**, não **como o número foi obtido**: os vetores do perfil e do curso não são persistidos. Recalibrar um peso torna o score antigo irreproduzível. Correção proposta (P1) em [[der-escopo-banco|📐 Escopo do DER]].
+
 ### 3. Dois apps
 
 `catalog` (o que a instituição oferece) e `quiz` (como se descobre o perfil) mudam por motivos diferentes. O scraping futuro toca só o `catalog`.
@@ -125,5 +128,6 @@ O resultado fica **congelado** no banco. Se os pesos de um curso mudarem amanhã
 ## Veja também
 
 - [[TCC|🎓 TCC]]
+- [[der-escopo-banco|📐 Escopo do DER]] — o diagrama, as cardinalidades e o backlog do modelo
 - [[engine-matching-cosseno|🧮 Engine de matching]]
 - [[catalogo-areas-e-cursos|📚 Catálogo]]
