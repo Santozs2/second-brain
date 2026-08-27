@@ -33,6 +33,9 @@ updated: 2026-08-25
 - [[passo-a-passo-f1-04-f1-03|🎚️ Passo a passo de F1-04 e F1-03]] — conjunto de empate, banda e o `build_payload`
 - [[passo-a-passo-f2-01-f2-03|🔌 Passo a passo de F2-01 a F2-03]] — protocolo, `FakeProvider` e configuração por `.env`
 - [[passo-a-passo-f2-04-f2-06|📝 Passo a passo de F2-04 a F2-06]] — prompt em arquivo, carregador e as 5 regras de validação
+- [[passo-a-passo-f2-07|🎛️ Passo a passo de F2-07]] — orquestração da entrega: `deliver()`, divergência auditável e fallback
+- [[passo-a-passo-f2-09|🔌 Passo a passo de F2-09]] — endpoint de entrega no contrato C3, o que desbloqueia a Frente 4
+- [[passo-a-passo-f2-08|🌐 Passo a passo de F2-08]] — GeminiProvider, cache em arquivo, timeout e metadados
 - [[comando-ver-payload|🔍 Ferramenta `ver_payload`]] — inspecionar o que a camada de IA recebe
 - [[handoff-autenticacao-colaborador|🤝 Handoff da autenticação]] — a trilha AUT-01 a AUT-12 entregue a outro colaborador
 - [[spec-autenticacao-lista-interesse|🔐 Spec de autenticação e lista de interesse]] — conta de usuário, registro de interesse e a métrica de conversão

@@ -9,6 +9,7 @@ criado: 2026-08-24
 
 > [!info] Projeto: [[TCC|🎓 TCC]] · Divisão: [[divisao-de-trabalho-tcc|👥 4 frentes]] · Plano da IA: [[camada-ia-plano-implementacao|🧩 Camada de IA]] · Prompt: [[prompt-padrao-recomendacao|📝 Prompt v1]] · Motor: [[engine-matching-cosseno|🧮 Engine]]
 > **Execução:** [[passo-a-passo-f1-01-f1-02|🔧 Passo a passo de F1-01 e F1-02]]
+> **Execução da Frente 2:** [[passo-a-passo-f2-07|🎛️ F2-07 orquestração]] → [[passo-a-passo-f2-09|🔌 F2-09 endpoint C3]] → [[passo-a-passo-f2-08|🌐 F2-08 Gemini]] *(F2-08 por último: é a única bloqueada pela credencial)*
 
 # 🧭 Spec — Frentes 1 e 2 sob o mesmo dono
 
